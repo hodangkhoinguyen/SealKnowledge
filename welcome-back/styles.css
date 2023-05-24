@@ -1,0 +1,32 @@
+body {
+    background-color: #FFE297;
+}
+
+.container {
+    padding: 4rem;
+    position: relative;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.shadow-button {
+    color: white;
+    cursor: pointer;
+    background-color: #438EFF;
+    padding: 0.75rem;
+    width: fit-content;
+    margin: 1rem 0;
+    border-radius: 6px;
+    box-shadow: 0.25rem 0.25rem 0 white;
+}
+
+img {
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    top: 4rem;
+    right: 4rem;
+}

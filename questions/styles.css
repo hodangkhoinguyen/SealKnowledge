@@ -1,0 +1,25 @@
+body {
+    background-color: #FFE297;
+}
+
+* {
+    color: white;
+}
+
+.container {
+    padding: 4rem;
+    position: relative;
+}
+
+.shadow-button {
+    cursor: pointer;
+    background-color: #2a9df4;
+    height: 2rem;
+    padding: 1rem;
+    border: 0.1rem solid black;
+    border-radius: 8px;
+    display: grid;
+    place-content: center;
+    box-shadow: 0.25rem 0.25rem 0 white;
+    margin: 2rem 0;
+}
