@@ -1,3 +1,4 @@
+/*  universal CSS*/
 * {
     font-family: 'Lato', sans-serif;
 }
@@ -13,7 +14,6 @@ h1, h2 {
 h1 {
     font-weight: 800;
     font-size: 40px;
-    /* margin: auto; */
 }
 
 h2 {
@@ -21,7 +21,8 @@ h2 {
     font-size: 30px;
 }
 
-#onboarding {
+/* onboarding CSS */
+.onboarding {
     display: flex;
     display: row;
     justify-content: center;
@@ -103,10 +104,16 @@ img {
     box-shadow: black 5px 5px;
 }
 
-.hidden {
-    display: none;
+#guest button:hover {
+    background-color: #438EFF;
+    color: white;
+    border: #438EFF 1px solid;
 }
 
-.display {
-    display: block;
+button:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }

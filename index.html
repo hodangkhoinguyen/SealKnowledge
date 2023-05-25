@@ -15,13 +15,18 @@
    
     <!-- stylesheet -->
     <link href="styles.css" rel="stylesheet">
+    <link href="onboarding.css" rel="stylesheet">
+    <link href="begingame.css" rel="stylesheet">
+
+    <!-- javascript file -->
+    <script src="script.js" defer></script>
     
     <title>Seal Your Knowledge!</title>
 </head>
 
 <body>
 <!-- — — — — — — — — — — — — — landing page html BEGIN — — — — — — — — — — — — — -->
-    <section class="onboarding hidden">
+    <section class="onboarding">
 
         <section id="leftHalf">
             <h1>Seal Your Knowledge</h1>
@@ -45,7 +50,7 @@
             <section id="guest">
                 <p>Don't have an account yet?</p>
                 <button>Create Account</button>
-                <button>Continue As Guest</button>
+                <button id="continueGuest">Continue As Guest</button>
             </section>
 
         </section>
@@ -53,10 +58,15 @@
 <!-- — — — — — — — — — — — — — landing page html END — — — — — — — — — — — — — -->
 
 <!-- — — — — — — — — — — — — — guest user flow BEGIN — — — — — — — — — — — — — -->
-    <section id="chooseTopic">
+    <section class="beginGame hidden">
         <i class="fa-solid fa-arrow-left"></i>
-        <h1>Choose Topic</h1>
-        <p>Step 1: Select Your Choice of Topic</p>
+        <h1>Begin Game</h1>
+        <h3>Step 1: Select Your Choice of Question Set</h3>
+
+        <section id="groupBtn">
+            <button class="whiteBtn">Putah Creek Animals and Plants</button>
+            <button class="whiteBtn">Patwin People</button>
+        </section>
 
     </section>
 <!-- — — — — — — — — — — — — — guest user flow END — — — — — — — — — — — — — -->

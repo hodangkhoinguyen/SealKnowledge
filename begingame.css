@@ -1,0 +1,34 @@
+section.beginGame {
+    margin: 3em;
+}
+
+.fa-arrow-left {
+    font-size: 40px;
+}
+
+.fa-arrow-left:hover {
+    cursor: pointer;
+}
+
+.whiteBtn {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    text-align: left;
+    max-width: 30%;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: black 5px 5px;
+    font-size: 20px;
+}
+
+.whiteBtn:hover {
+    background-color: #438EFF;
+    color: white;
+}
+
+#groupBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
