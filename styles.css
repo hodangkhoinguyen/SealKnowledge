@@ -102,3 +102,11 @@ img {
     border-radius: 15px;
     box-shadow: black 5px 5px;
 }
+
+.hidden {
+    display: none;
+}
+
+.display {
+    display: block;
+}
