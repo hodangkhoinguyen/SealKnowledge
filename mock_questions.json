@@ -1,0 +1,28 @@
+[
+    {
+        "question": "What is the name of this animal?",
+        "options": [
+            "Muskrat",
+            "Blue Heron",
+            "Frog"
+        ],
+        "answer": "B"
+    },
+    {
+        "question": "How long do Putal Creek salmon live in the ocean?",
+        "options": [
+            "2-4 days",
+            "2-4 months",
+            "2-4 years"
+        ],
+        "answer": "C"
+    },{
+        "question": "What is true about the muskrat in Putah Creek?",
+        "options": [
+            "They are frequently seen",
+            "Their tails are like paddles",
+            "They are a type of a duck"
+        ],
+        "answer": "B"
+    }
+]
