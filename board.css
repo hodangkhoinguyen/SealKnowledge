@@ -1,0 +1,26 @@
+/* 5 rows x 8 columns */
+#board-container {
+    display: grid;
+    background-color: pink;
+    width: fit-content;
+}
+
+.row {
+    display: flex;
+}
+
+.middle-container {
+    display: flex;
+    width: 100%;
+}
+
+#middle-area {
+    width: 30rem;
+}
+
+.cell {
+    background-color: blue;
+    margin: 0.5em;
+    height: 4rem;
+    width: 4rem;
+}
