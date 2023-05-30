@@ -13,7 +13,9 @@
    
     <!-- stylesheet -->
     <link href="board.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
     <script src="./board.js" defer></script>
+
     <title>Seal Your Knowledge!</title>
 </head>
 
@@ -22,28 +24,38 @@
         <h2>Game</h2>
 
         <section id="board-container">
+            <img class="bike-img" src="./images/bike.png" alt="bike-img">
             <!-- First Row -->
-            <section class="row"></section>
+            <section id="upper-row" class="row"></section>
 
             <!-- Middle Rows-->
             <section class="middle-container">
                 <!-- First Column -->
-                <section class="column"></section>
+                <section id="left-column" class="column"></section>
 
                 <!-- Middle Area -->
-                <section id="middle-area">
-                    <section class="roll-container">
-                        <p>5</p>
-                        <button id="roll">Roll</button>
+                <section class="middle-area">
+                    <section class="play-container">
+                        <section class="roll-container">
+                            <img class="dice-img" src="./images/dice.png" alt="dice-img">
+                            <button id="rollBtn">ROLL DICE</button>
+                            <section class="roll-result-container hidden">
+                                <p>You Rolled</p>
+                                <p class="roll-result">5</p>
+                                <button id="nextQuestion">Next</button>
+                            </section>    
+                        </section>
+                        <section class="question-container hidden">
+                        </section>
                     </section>
                 </section>
 
                 <!-- Last Column -->
-                <section class="column"></section>
+                <section id="right-column" class="column"></section>
             </section>
 
             <!-- Last Row -->
-            <section class="row"></section>
+            <section id="lower-row" class="row"></section>
         </section>
     </section>
 
