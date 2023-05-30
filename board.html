@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;700&family=Lato:wght@300;400;700;900&family=Life+Savers:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- icons from font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+    <!-- stylesheet -->
+    <link href="board.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <script src="./board.js" defer></script>
+
+    <title>Seal Your Knowledge!</title>
+</head>
+
+<body>
+    <section class="game-container">
+        <h2>Game</h2>
+
+        <section id="board-container">
+            <img class="bike-img" src="./images/bike.png" alt="bike-img">
+            <!-- First Row -->
+            <section id="upper-row" class="row"></section>
+
+            <!-- Middle Rows-->
+            <section class="middle-container">
+                <!-- First Column -->
+                <section id="left-column" class="column"></section>
+
+                <!-- Middle Area -->
+                <section class="middle-area">
+                    <section class="play-container">
+                        <section class="roll-container">
+                            <img class="dice-img" src="./images/dice.png" alt="dice-img">
+                            <button id="rollBtn">ROLL DICE</button>
+                            <section class="roll-result-container hidden">
+                                <p>You Rolled</p>
+                                <p class="roll-result">5</p>
+                                <button id="nextQuestion">Next</button>
+                            </section>    
+                        </section>
+                        <section class="question-container hidden">
+                        </section>
+                    </section>
+                </section>
+
+                <!-- Last Column -->
+                <section id="right-column" class="column"></section>
+            </section>
+
+            <!-- Last Row -->
+            <section id="lower-row" class="row"></section>
+        </section>
+    </section>
+
+</body>
+</html>
