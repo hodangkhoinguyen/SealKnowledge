@@ -21,8 +21,8 @@ h2 {
     font-size: 30px;
 }
 
-/* onboarding CSS */
-.onboarding {
+/* home CSS */
+.home {
     display: flex;
     display: row;
     justify-content: center;
@@ -59,7 +59,6 @@ img {
 #loginInput {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     margin: 1em 1em 1em 0;
 }
 
@@ -113,6 +112,20 @@ img {
 button:hover {
     cursor: pointer;
 }
+
+/* all sections style */
+section.sectionStyle {
+    margin: 5em;
+}
+
+.fa-arrow-left {
+    font-size: 40px;
+}
+
+.fa-arrow-left:hover {
+    cursor: pointer;
+}
+/* all section style END */
 
 .hidden {
     display: none;

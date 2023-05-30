@@ -1,15 +1,3 @@
-section.beginGame {
-    margin: 3em;
-}
-
-.fa-arrow-left {
-    font-size: 40px;
-}
-
-.fa-arrow-left:hover {
-    cursor: pointer;
-}
-
 .whiteBtn {
     margin: 0.5em;
     padding: 0.5em 1em;
@@ -31,4 +19,16 @@ section.beginGame {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+#groupBtn label {
+    padding: 0.2em;
+    margin: 0.5em 0;
+}
+
+#groupBtn label input {
+    border: none;
+    border-bottom: black 2px solid;
+    background-color: #B1D0FF;
+    font-size: 18px;
 }
