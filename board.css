@@ -53,6 +53,11 @@
 .question-container {
     padding: 1rem;
 }
+/* 
+.question-container section {
+    display: flex;
+    flex-direction: column;
+} */
 
 button {
     background-color: #393939;
