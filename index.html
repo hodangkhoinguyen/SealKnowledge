@@ -25,6 +25,35 @@
 </head>
 
 <body>
+<!-- — — — — — — — — — — — — — OVERLAY BEGIN — — — — — — — — — — — — — -->
+    <section id="rules" class="hidden">
+        <p>blah blah</p>
+        <p>add rules for the game here</p>
+        <button class="closeRule">close</button>
+    </section>
+
+    <section id="overlay" class="overlayStyle hidden">
+        <section id="content">
+            <h2>This is an overlay instruction of the user test.</h2>
+            <p>
+                First of all, thank you for your time to participate in this user test!
+            </p>
+            <p>
+                There are 3 tasks you would need to perform during this session.
+                <ol>
+                    <li>Log in to the game to select your own quesion set</li>
+                    <li>Play the game as a guest</li>
+                    <li>Locate the rules section</li>
+                </ol>
+            </p>
+            <p>
+                Once you're done, we will ask you some questions regarding your experience with the game.
+            </p>
+            <button class="close">close</button>
+        </section>
+    </section>
+<!-- — — — — — — — — — — — — — OVERLAY END — — — — — — — — — — — — — -->
+
 <!-- — — — — — — — — — — — — — landing page html BEGIN — — — — — — — — — — — — — -->
     <section class="home">
 
@@ -34,9 +63,9 @@
         </section>
 
         <section id="loginForm">
+            <i class="fa-solid fa-question"></i>
 
             <h2>Log In</h2>
-
             <section id="loginInput">
                 <input placeholder="Username"></input>
                 <input placeholder="Password"></input>
@@ -55,27 +84,6 @@
             <!-- user test button -->
             <section id="userTestBtn" class="open">
                 <button>User Test Guides</button>
-            </section>
-
-            <section id="overlay" class="hidden">
-                <section id="content">
-                    <h2>This is an overlay instruction of the user test.</h2>
-                    <p>
-                        First of all, thank you for your time to participate in this user test!
-                    </p>
-                    <p>
-                        There are 3 tasks you would need to perform during this session.
-                        <ol>
-                            <li>Log in to the game to select your own quesion set</li>
-                            <li>Play the game as a guest</li>
-                            <li>Locate the rules section</li>
-                        </ol>
-                    </p>
-                    <p>
-                        Once you're done, we will ask you some questions regarding your experience with the game.
-                    </p>
-                    <button class="close">close</button>
-                </section>
             </section>
         </section>
     </section>
@@ -115,7 +123,6 @@
     </section>
 
 <!-- — — — — — — — — — — — — — select team names END — — — — — — — — — — — — — — — — -->
-
 
 
 </body>

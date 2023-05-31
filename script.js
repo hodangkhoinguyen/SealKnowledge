@@ -8,30 +8,43 @@
         document.querySelector('.beginGame').classList.remove('hidden');
 	});
 
-    // going back to onboarding from begin game page
+    // going BACK to onboarding from begin game page
     document.querySelector('#questionSelect').addEventListener('click', function(event) {
         document.querySelector('.teamSelect').classList.remove('hidden');
         document.querySelector('.beginGame').classList.add('hidden');
-    })
+    });
 
-    // going back to onboarding from begin game page
+    // going BACK to onboarding from begin game page
     document.querySelector('#backHome').addEventListener('click', function(event) {
         document.querySelector('.home').classList.remove('hidden');
         document.querySelector('.beginGame').classList.add('hidden');
-    })
+    });
 
-    // going back to begin game page from team select page
+    // going BACK to begin game page from team select page
     document.querySelector('#backBegin').addEventListener('click', function(event) {
         document.querySelector('.beginGame').classList.remove('hidden');
         document.querySelector('.teamSelect').classList.add('hidden');
-    })
+    });
 
+    /* OVERLAY FOR RULES */
+    // open overlay
+    document.querySelector('.fa-question').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('rules').className = 'show';
+    });
+    // closing overlay
+    document.querySelector('.closeRule').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('rules').className = 'hidden';
+    });
+
+
+    /* BUTTON INTERACTION FOR THE USER TEST INSTRUCTIONS*/
     // open overlay
     document.querySelector('.open').addEventListener('click', function(event) {
         event.preventDefault();
         document.getElementById('overlay').className = 'show';
     });
-
     // closing overlay
     document.querySelector('.close').addEventListener('click', function(event) {
         event.preventDefault();
