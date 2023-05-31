@@ -26,4 +26,16 @@
         document.querySelector('.teamSelect').classList.add('hidden');
     })
 
+    // open overlay
+    document.querySelector('.open').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('overlay').className = 'show';
+    });
+
+    // closing overlay
+    document.querySelector('.close').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('overlay').className = 'hidden';
+    });
+
 })();
