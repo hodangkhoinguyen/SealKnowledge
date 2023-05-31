@@ -84,6 +84,11 @@ h1, h2 {
 .answer-item {
     margin-bottom: 0.75rem;
 }
+/* 
+.question-container section {
+    display: flex;
+    flex-direction: column;
+} */
 
 button {
     background-color: #393939;

@@ -172,4 +172,21 @@
         Player.nextTurn();
         return questionDiv;
     }
+<<<<<<< HEAD
 })();
+=======
+
+    class Player {
+        constructor() {
+
+        }
+    }
+
+    class Square {
+        constructor() {
+            
+        }
+    }
+
+})();   
+>>>>>>> 241bd0d4d8dabfc6d1b0cdbff6d46a4e03adf104
