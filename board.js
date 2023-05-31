@@ -1,17 +1,43 @@
 (function() {
     'use strict';
-    const board = document.getElementById("board-container");
+    
+    class Player {
+        static cellList;
+        static currTurn;
+
+        constructor(position, moverSymbol, variableX, variableY) {
+            this.position = position;
+            this.moverSymbol = moverSymbol;
+            this.variableX = variableX;
+            this.variableY = variableY;
+        }
+
+        move(num = 0) {
+            this.position += num;
+            this.position %= cellList.length;
+            let currCell = cellList[this.position];
+            this.moverSymbol.style.left = currCell.offsetLeft + this.variableX + "px";
+            this.moverSymbol.style.top = currCell.offsetTop + this.variableY + "px";
+        }
+
+        static nextTurn() {
+            Player.currTurn = (Player.currTurn + 1) % 4;
+        }
+    }
+
     const upperRow = document.getElementById("upper-row");
     const lowerRow = document.getElementById("lower-row");
     const leftColumn = document.getElementById("left-column");
     const rightColumn = document.getElementById("right-column");
-    const mover = document.getElementsByClassName("bike-img")[0];
+    const mover1 = document.getElementsByClassName("bike-img")[0];
+    const mover2 = document.getElementsByClassName("bike-img")[1];
+    const mover3 = document.getElementsByClassName("bike-img")[2];
+    const mover4 = document.getElementsByClassName("bike-img")[3];
 
     const NUM_ROW = 5;
     const NUM_COL = 8;
     let cellList = [];
     let stepNum;
-    let currIndex = 0;
 
     // First row
     for (let i = 0; i < NUM_COL; i++) {
@@ -48,13 +74,16 @@
         return cell;
     }
 
-    let currCell = cellList[currIndex];
-    setMover(mover, currCell.offsetLeft, currCell.offsetTop);
+    const playerList = [
+        new Player(0, mover1, 0, 0),
+        new Player(0, mover2, 0, 60),
+        new Player(0, mover3, 60, 0),
+        new Player(0, mover4, 60, 60)
+    ];
 
-    function setMover(moverObj, x, y) {
-        moverObj.style.left = x + "px";
-        moverObj.style.top = y + "px";
-    }
+    playerList.forEach(p => p.move());
+    Player.cellList = cellList;
+    Player.currTurn = 0;
 
     const rollContainer = document.getElementsByClassName("roll-container")[0];
     const questionContainer = document.getElementsByClassName("question-container")[0];
@@ -74,45 +103,44 @@
         rollResultContainer.classList.add("hidden");
         rollContainer.classList.add("hidden");
         questionContainer.classList.remove("hidden");
-        questionContainer.innerHTML = "";
         let problem = {
             question: "What is 1+1?",
             answers: ["A", "B", "C"],
             key: "A"
         };
+
+        questionContainer.innerHTML = "";
         questionContainer.appendChild(createQuestion(problem));
     });
 
-    function answerCorrectly() {
-        currIndex += stepNum;
-        currIndex = currIndex % cellList.length;
-        currCell = cellList[currIndex];
-        setMover(mover, currCell.offsetLeft, currCell.offsetTop);
-    }
-
     function createQuestion(problem) {
         const questionDiv = document.createElement("section");
-        const headerQuestion = document.createElement("h5");
+        questionDiv.className = "question-display";
+        const headerQuestion = document.createElement("h3");
         headerQuestion.textContent = "Question";
         questionDiv.appendChild(headerQuestion);
 
         const questionLabel = document.createElement("label");
-        questionLabel.className = "question";
+        questionLabel.className = "question-item";
         questionLabel.textContent = problem.question;
         questionDiv.appendChild(questionLabel);
 
         const answerList = problem.answers;
         for (let answer of answerList) {
+            const sectionAnswer = document.createElement("section");
+            sectionAnswer.className = "answer-item";
+
             const input = document.createElement("input");
             input.type = "radio";
             input.name = "q";
             input.value = answer;
-            questionDiv.appendChild(input);
+            sectionAnswer.appendChild(input);
 
             const label = document.createElement("label");
             label.setAttribute("for", "q");
             label.textContent = answer;
-            questionDiv.appendChild(label);
+            sectionAnswer.appendChild(label);
+            questionDiv.appendChild(sectionAnswer);
         }
 
         const answerKey = problem.key;
@@ -131,25 +159,17 @@
                 }
             }
             if (isCorrect) {
-                answerCorrectly();
+                console.log(playerList);
+                console.log(stepNum);
+                console.log(Player.currTurn);
+                playerList[Player.currTurn].move(stepNum);
             }
             questionContainer.classList.add("hidden");
             rollContainer.classList.remove("hidden");
         });
 
         questionDiv.appendChild(button);
+        Player.nextTurn();
         return questionDiv;
     }
-
-    class Player {
-        constructor() {
-
-        }
-    }
-
-    class Square {
-        constructor() {
-            
-        }
-    }
-})();   
+})();
