@@ -77,6 +77,9 @@
         return cell;
     }
 
+    // Add a specific classname for the first cell
+    cellList[0].classList.add("first-cell");
+
     const playerList = [
         new Player(teamname[0], 0, mover1, 0, 0),
         new Player(teamname[1], 0, mover2, 0, 60),

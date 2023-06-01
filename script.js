@@ -81,6 +81,6 @@
             teamname.push(i.value);
         }
         localStorage.setItem("teamname", JSON.stringify(teamname));
-        window.location.href = "./SealKnowledge/board.html";
+        window.location.href = "./board.html";
     });    
 })();
