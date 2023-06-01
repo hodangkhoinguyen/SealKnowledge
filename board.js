@@ -172,9 +172,6 @@
         Player.nextTurn();
         return questionDiv;
     }
-})();
-
-
     class Player {
         constructor() {
 
@@ -186,5 +183,5 @@
             
         }
     }
+})();
 
-})();   
