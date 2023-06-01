@@ -172,16 +172,5 @@
         Player.nextTurn();
         return questionDiv;
     }
-    class Player {
-        constructor() {
-
-        }
-    }
-
-    class Square {
-        constructor() {
-            
-        }
-    }
 })();
 
