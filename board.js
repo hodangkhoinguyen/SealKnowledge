@@ -5,11 +5,12 @@
         static cellList;
         static currTurn;
 
-        constructor(position, moverSymbol, variableX, variableY) {
+        constructor(name, position, moverSymbol, variableX, variableY) {
             this.position = position;
             this.moverSymbol = moverSymbol;
             this.variableX = variableX;
             this.variableY = variableY;
+            this.name = name;
         }
 
         move(num = 0) {
@@ -34,6 +35,8 @@
     const mover3 = document.getElementsByClassName("bike-img")[2];
     const mover4 = document.getElementsByClassName("bike-img")[3];
 
+    const teamname = JSON.parse(localStorage.getItem("teamname"));
+    console.log(teamname);
     const NUM_ROW = 5;
     const NUM_COL = 8;
     let cellList = [];
@@ -74,11 +77,14 @@
         return cell;
     }
 
+    // Add a specific classname for the first cell
+    cellList[0].classList.add("first-cell");
+
     const playerList = [
-        new Player(0, mover1, 0, 0),
-        new Player(0, mover2, 0, 60),
-        new Player(0, mover3, 60, 0),
-        new Player(0, mover4, 60, 60)
+        new Player(teamname[0], 0, mover1, 0, 0),
+        new Player(teamname[1], 0, mover2, 0, 60),
+        new Player(teamname[2], 0, mover3, 60, 0),
+        new Player(teamname[3], 0, mover4, 60, 60)
     ];
 
     playerList.forEach(p => p.move());
@@ -90,6 +96,11 @@
     const rollBtn = document.getElementById("rollBtn");
     const rollResult = document.getElementsByClassName("roll-result")[0];
     const rollResultContainer = document.getElementsByClassName("roll-result-container")[0];
+    setTimeout(function(){
+        alert(`${playerList[Player.currTurn].name} is playing`);
+    }, 300);
+    
+
     rollBtn.addEventListener("click", function () {
         stepNum = Math.floor(Math.random() * 6) + 1;
         rollResult.textContent = stepNum;
@@ -131,13 +142,14 @@
             sectionAnswer.className = "answer-item";
 
             const input = document.createElement("input");
+            input.id = answer;
             input.type = "radio";
             input.name = "q";
             input.value = answer;
             sectionAnswer.appendChild(input);
 
             const label = document.createElement("label");
-            label.setAttribute("for", "q");
+            label.setAttribute("for", answer);
             label.textContent = answer;
             sectionAnswer.appendChild(label);
             questionDiv.appendChild(sectionAnswer);
@@ -163,14 +175,18 @@
             if (isCorrect) {
                 console.log(playerList);
                 console.log(stepNum);
+                alert(`Your answer is correct. Your team can move ${stepNum} steps`);
                 console.log(Player.currTurn);
                 playerList[Player.currTurn].move(stepNum);
             } 
-            // else {
-            //     newDiv.appendChild(wrongMessage);
-            // }
+            else {
+                alert(`Your answer is incorrect. Your team cannot move`);
+            }
             questionContainer.classList.add("hidden");
             rollContainer.classList.remove("hidden");
+            setTimeout(function(){
+                alert(`${playerList[Player.currTurn].name} is playing`);
+            }, 1250);
         });
 
         questionDiv.appendChild(button);

@@ -73,5 +73,14 @@
         document.querySelector('#loginOverlay').className = 'hidden';
     });
 
-
+    const startBtn = document.getElementById("start-game");
+    startBtn.addEventListener("click", function() {
+        const inputTeamName = document.getElementsByClassName("teamname");
+        let teamname = [];
+        for (let i of inputTeamName) {
+            teamname.push(i.value);
+        }
+        localStorage.setItem("teamname", JSON.stringify(teamname));
+        window.location.href = "./board.html";
+    });    
 })();
