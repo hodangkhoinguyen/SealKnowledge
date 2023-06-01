@@ -104,9 +104,9 @@
         rollContainer.classList.add("hidden");
         questionContainer.classList.remove("hidden");
         let problem = {
-            question: "What is 1+1?",
-            answers: ["A", "B", "C"],
-            key: "A"
+            question: "What is the name of this animal?",
+            answers: ["Blue Heron", "Muskrat", "Frog"],
+            key: "Blue Heron"
         };
 
         questionContainer.innerHTML = "";
@@ -143,6 +143,8 @@
             questionDiv.appendChild(sectionAnswer);
         }
 
+        // const newDiv = document.createElement("div");
+        // const wrongMessage = document.createTextNode("Sorry, you got the answer wrong and got a flat tire :(");
         const answerKey = problem.key;
         const button = document.createElement("button");
         button.textContent = "Submit Answer";
@@ -163,7 +165,10 @@
                 console.log(stepNum);
                 console.log(Player.currTurn);
                 playerList[Player.currTurn].move(stepNum);
-            }
+            } 
+            // else {
+            //     newDiv.appendChild(wrongMessage);
+            // }
             questionContainer.classList.add("hidden");
             rollContainer.classList.remove("hidden");
         });

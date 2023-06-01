@@ -8,6 +8,17 @@
         document.querySelector('.beginGame').classList.remove('hidden');
 	});
 
+    // patwin people page
+    document.querySelector('#patwin').addEventListener('click', function(event) {
+        document.querySelector('.beginGame').classList.add('hidden');
+        document.querySelector('#patwinPage').classList.remove('hidden');
+	});
+    // exiting patwin people page
+    document.querySelector('#backTopic').addEventListener('click', function(event) {
+        document.querySelector('.beginGame').classList.remove('hidden');
+        document.querySelector('#patwinPage').classList.add('hidden');
+    });
+
     // going BACK to onboarding from begin game page
     document.querySelector('#questionSelect').addEventListener('click', function(event) {
         document.querySelector('.teamSelect').classList.remove('hidden');
@@ -19,14 +30,14 @@
         document.querySelector('.home').classList.remove('hidden');
         document.querySelector('.beginGame').classList.add('hidden');
     });
-
-    // going BACK to begin game page from team select page
+    
+    // going BACK to begin game page from team select page 
     document.querySelector('#backBegin').addEventListener('click', function(event) {
         document.querySelector('.beginGame').classList.remove('hidden');
         document.querySelector('.teamSelect').classList.add('hidden');
     });
 
-    /* OVERLAY FOR RULES */
+/* OVERLAY FOR RULES */
     // open overlay
     document.querySelector('.fa-question').addEventListener('click', function(event) {
         event.preventDefault();
@@ -39,7 +50,7 @@
     });
 
 
-    /* BUTTON INTERACTION FOR THE USER TEST INSTRUCTIONS*/
+/* BUTTON INTERACTION FOR THE USER TEST INSTRUCTIONS*/
     // open overlay
     document.querySelector('.open').addEventListener('click', function(event) {
         event.preventDefault();
@@ -50,5 +61,17 @@
         event.preventDefault();
         document.getElementById('overlay').className = 'hidden';
     });
+
+/* login button overlay */
+    document.querySelector('#login').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('#loginOverlay').className = 'show';
+    });
+    // closing overlay
+    document.querySelector('#closeOverlay').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('#loginOverlay').className = 'hidden';
+    });
+
 
 })();

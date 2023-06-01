@@ -27,21 +27,20 @@
 <body>
 <!-- — — — — — — — — — — — — — OVERLAY BEGIN — — — — — — — — — — — — — -->
     <section id="rules" class="hidden">
-        <p>blah blah</p>
-        <p>add rules for the game here</p>
+        <h1>This is the rules page!</h1>
+        <p>However, we are still in the creation process so we do not have any rules displayed here just yet.</p>
         <button class="closeRule">close</button>
     </section>
 
     <section id="overlay" class="overlayStyle hidden">
         <section id="content">
-            <h2>This is an overlay instruction of the user test.</h2>
+            <h2>Instruction of the user test.</h2>
             <p>
                 First of all, thank you for your time to participate in this user test!
             </p>
             <p>
                 There are 3 tasks you would need to perform during this session.
                 <ol>
-                    <li>Log in to the game to select your own quesion set</li>
                     <li>Play the game as a guest</li>
                     <li>Locate the rules section</li>
                 </ol>
@@ -60,6 +59,11 @@
         <section id="leftHalf">
             <h1>Seal Your Knowledge</h1>
             <img src="images/seal.png" alt="centennial seal image" width="500" height="500">
+            
+            <!-- user test button -->
+            <section id="userTestBtn" class="open">
+                <button>User Test Guides</button>
+            </section>
         </section>
 
         <section id="loginForm">
@@ -69,21 +73,22 @@
             <section id="loginInput">
                 <input placeholder="Username"></input>
                 <input placeholder="Password"></input>
-                <button>Log In</button>
+                <button id="login">Log In</button>
+            </section>
+
+            <section id="loginOverlay" class="hidden">
+                <p>Sorry, we are still working on developing login feature :(</p>
+                <button id="closeOverlay">close</button>
             </section>
 
             <br>
             <br>
             <br>
+
             <section id="guest">
                 <p>Don't have an account yet?</p>
                 <button>Create Account</button>
                 <button id="continueGuest">Continue As Guest</button>
-            </section>
-
-            <!-- user test button -->
-            <section id="userTestBtn" class="open">
-                <button>User Test Guides</button>
             </section>
         </section>
     </section>
@@ -97,11 +102,18 @@
 
         <section id="groupBtn">
             <button id="questionSelect" class="whiteBtn">Putah Creek Animals and Plants</button>
-            <button class="whiteBtn">Patwin People</button>
+            <button id="patwin" class="whiteBtn">Patwin People</button>
         </section>
 
     </section>
 <!-- — — — — — — — — — — — — — select question set END — — — — — — — — — — — — — -->
+
+<!-- — — — — — — — — — — — — — patwin people notification BEGIN — — — — — — — — — — — — — -->
+    <section id="patwinPage" class="sectionStyle hidden">
+        <i id="backTopic" class="fa-solid fa-arrow-left"></i>
+        <h2>OOPS it seems like there are no question sets regarding the topic: "Patwin People"</h2>
+    </section>
+<!-- — — — — — — — — — — — — — patwin people notification END — — — — — — — — — — — — — -->
 
 <!-- — — — — — — — — — — — — — select team names BEGIN — — — — — — — — — — — — — — -->
     <section class="teamSelect sectionStyle hidden">
