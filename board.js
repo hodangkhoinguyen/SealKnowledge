@@ -174,17 +174,3 @@
     }
 })();
 
-
-    class Player {
-        constructor() {
-
-        }
-    }
-
-    class Square {
-        constructor() {
-            
-        }
-    }
-
-})();   
