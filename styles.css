@@ -22,18 +22,6 @@ h2 {
 }
 
 /* home CSS */
-.fa-question {
-    margin-left: 100%;
-    text-align: right;
-    font-size: 25px;
-    border: transparent 2px solid;
-}
-
-.fa-question:hover {
-    cursor: pointer;
-    color:rgb(255, 77, 106);
-}
-
 .home {
     display: flex;
     display: row;
@@ -145,7 +133,7 @@ section.sectionStyle {
 }
 
 /* user test & overlay styling */
-#userTestBtn button{
+#userTestBtn button {
     /* display: flex; */
     justify-content: space-around;
     margin-top: 1em;
@@ -159,6 +147,10 @@ section.sectionStyle {
     font-size: 25px;
 }
 
+#userTestBtn button:hover {
+    background-color: rgb(212, 31, 61);
+}
+
 #rules, #overlay {
     position: absolute;
     background-color: white;
@@ -170,6 +162,30 @@ section.sectionStyle {
     transform: translate(40%, 30%);
     border-radius: 30px;
     border: rgb(255, 234, 47) 10px solid;
+}
+
+#ruleSection {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+button.ruleBtn {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.3em 0.8em;
+    max-width: 100%;
+    background-color: rgb(255, 77, 106);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: black 5px 5px;
+    font-size: 20px;
+}
+
+.ruleBtn:hover {
+    cursor: pointer;
+    background-color: rgb(212, 31, 61);
 }
 
 .show {

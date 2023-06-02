@@ -39,7 +39,7 @@
 
 /* OVERLAY FOR RULES */
     // open overlay
-    document.querySelector('.fa-question').addEventListener('click', function(event) {
+    document.querySelector('.ruleBtn').addEventListener('click', function(event) {
         event.preventDefault();
         document.getElementById('rules').className = 'show';
     });
