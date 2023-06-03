@@ -17,8 +17,8 @@
             this.position += num;
             this.position %= cellList.length;
             let currCell = cellList[this.position];
-            this.moverSymbol.style.left = currCell.offsetLeft + this.variableX + "px";
-            this.moverSymbol.style.top = currCell.offsetTop + this.variableY + "px";
+            this.moverSymbol.style.left = currCell.getBoundingClientRect().left + this.variableX + "px";
+            this.moverSymbol.style.top = currCell.getBoundingClientRect().top + this.variableY + "px";
         }
 
         static nextTurn() {
@@ -26,6 +26,7 @@
         }
     }
 
+    const boardContainer = document.getElementsByClassName("board-container")[0];
     const upperRow = document.getElementById("upper-row");
     const lowerRow = document.getElementById("lower-row");
     const leftColumn = document.getElementById("left-column");
@@ -81,38 +82,37 @@
     cellList[0].classList.add("first-cell");
 
     const playerList = [
-        new Player(teamname[0], 0, mover1, 0, 0),
-        new Player(teamname[1], 0, mover2, 0, 60),
-        new Player(teamname[2], 0, mover3, 60, 0),
-        new Player(teamname[3], 0, mover4, 60, 60)
+        new Player(teamname[0], 0, mover1, 10, 10),
+        new Player(teamname[1], 0, mover2, 10, 80),
+        new Player(teamname[2], 0, mover3, 80, 10),
+        new Player(teamname[3], 0, mover4, 80, 80)
     ];
 
-    playerList.forEach(p => p.move());
+    playerList.forEach(p => p.move(0));
     Player.cellList = cellList;
     Player.currTurn = 0;
 
     const rollContainer = document.getElementsByClassName("roll-container")[0];
+    const diceContainer = document.getElementsByClassName("dice-container")[0];
     const questionContainer = document.getElementsByClassName("question-container")[0];
     const rollBtn = document.getElementById("rollBtn");
     const rollResult = document.getElementsByClassName("roll-result")[0];
     const rollResultContainer = document.getElementsByClassName("roll-result-container")[0];
-    setTimeout(function(){
-        alert(`${playerList[Player.currTurn].name} is playing`);
-    }, 300);
-    
+    const displayTurn = document.getElementsByClassName("turn-display")[0];
+    displayTurn.textContent = `${playerList[Player.currTurn].name}'s turn`;
 
     rollBtn.addEventListener("click", function () {
         stepNum = Math.floor(Math.random() * 6) + 1;
         rollResult.textContent = stepNum;
         rollResultContainer.classList.remove("hidden");
-        rollBtn.classList.add("hidden");
+        rollContainer.classList.add("hidden");
     });
 
     const nextBtn = document.getElementById("nextQuestion");
     nextBtn.addEventListener("click", function () {
-        rollBtn.classList.remove("hidden");
+        rollContainer.classList.remove("hidden");
         rollResultContainer.classList.add("hidden");
-        rollContainer.classList.add("hidden");
+        diceContainer.classList.add("hidden");
         questionContainer.classList.remove("hidden");
         let problem = {
             question: "What is the name of this animal?",
@@ -172,26 +172,47 @@
                     }
                 }
             }
-            if (isCorrect) {
-                console.log(playerList);
-                console.log(stepNum);
-                alert(`Your answer is correct. Your team can move ${stepNum} steps`);
-                console.log(Player.currTurn);
-                playerList[Player.currTurn].move(stepNum);
-            } 
-            else {
-                alert(`Your answer is incorrect. Your team cannot move`);
-            }
             questionContainer.classList.add("hidden");
-            rollContainer.classList.remove("hidden");
-            setTimeout(function(){
-                alert(`${playerList[Player.currTurn].name} is playing`);
-            }, 1250);
+            displayStatus(isCorrect);
         });
 
         questionDiv.appendChild(button);
-        Player.nextTurn();
         return questionDiv;
+    }
+
+    const statusContainer = document.getElementsByClassName("status-container")[0];
+    const answerResult = document.getElementsByClassName("answer-result")[0];
+    const nextTeamBtn = document.getElementById("nextTeamBtn");
+    function displayStatus(isCorrect) {
+        statusContainer.classList.remove("hidden");
+        if (isCorrect) {
+            answerResult.textContent = `Correct. You are allowed to move ${stepNum} steps`;
+            if (playerList[Player.currTurn].position + stepNum >= Player.cellList.length) {
+                boardContainer.classList.add("hidden");
+                displayFinalResult(playerList[Player.currTurn]);
+                return;
+            }
+            else {
+                playerList[Player.currTurn].move(stepNum);
+            }
+        }
+        else {
+            answerResult.textContent = `Incorrect. Your team cannot move`;
+        }
+        Player.nextTurn();
+
+        nextTeamBtn.addEventListener("click", function () {
+            diceContainer.classList.remove("hidden");
+            statusContainer.classList.add("hidden");
+            displayTurn.textContent = `${playerList[Player.currTurn].name}'s turn`;    
+        });
+    }
+
+    const finalResultContainer = document.getElementsByClassName("final-result")[0];
+    function displayFinalResult(player) {
+        finalResultContainer.classList.remove("hidden");
+        const teamWinner = document.getElementsByClassName("team-winner")[0];
+        teamWinner.textContent = player.name;
     }
 })();
 

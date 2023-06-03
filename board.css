@@ -11,9 +11,20 @@ h1, h2 {
     font-family: 'Life Savers', cursive;
 }
 
+h1 {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* 5 rows x 8 columns */
 #board-container {
-    display: grid;
     width: fit-content;
 }
 
@@ -44,8 +55,8 @@ h1, h2 {
 .cell {
     background-color: white;
     border: solid black 1px;
-    height: 8rem;
-    width: 8rem;
+    height: 10rem;
+    width: 10rem;
 }
 
 .play-container {
@@ -56,12 +67,16 @@ h1, h2 {
     width: 80%;
 }
 
-.roll-container {
+.dice-container {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+}
+
+.dice-container > section {
+    width: 40%;
 }
 
 .question-container {
@@ -100,9 +115,24 @@ button {
     padding: 0.6rem 1rem;
 }
 
-.dice-img {
-    width: 10rem;
-    height: 10rem;
+.turn-display {
+    font-size: 2rem;
+}
+
+.status-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-container > section {
+    width: 40%;
+}
+
+.answer-display {
+    font-size: 1.5rem;
 }
 
 .bike-img {
