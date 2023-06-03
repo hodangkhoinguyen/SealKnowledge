@@ -151,7 +151,7 @@ section.sectionStyle {
     background-color: rgb(212, 31, 61);
 }
 
-#rules, #overlay {
+#overlay {
     position: absolute;
     background-color: white;
     padding: 2em;
@@ -169,6 +169,51 @@ section.sectionStyle {
     width: 100%;
     justify-content: flex-end;
 }
+
+#rules {
+    position: absolute;
+    background-color: white;
+    padding: 2em;
+    top: 0;
+    left: 0;
+    width: 75vw;
+    height: fit-content;
+    transform: translate(15%, 10%);
+    border-radius: 30px;
+    border: rgb(255, 234, 47) 10px solid;
+}
+
+#rulesContent {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50vw;
+}
+
+#rulesContent h1 {
+    margin: 0.5em 0 0 0;
+}
+
+#rulesContent h4 {
+    margin: 0;
+    font-size: 20px;
+}
+
+#rulesContent ol li {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+#rulesContent p {
+    margin: 0 0 1em 0;
+    font-size: 15px;
+    color: red;
+}
+
+#rulesContent button {
+    width: 10%;
+}
+
 
 button.ruleBtn {
     display: flex;
