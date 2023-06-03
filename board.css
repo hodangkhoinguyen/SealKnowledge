@@ -5,6 +5,7 @@
 
 html {
     background-color: #B1D0FF;
+    max-height: 100vh;
 }
 
 h1, h2 {
@@ -21,6 +22,9 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 3em;
+    width: fit-content;
+    height: fit-content;
 }
 
 /* 5 rows x 8 columns */
@@ -146,6 +150,6 @@ button {
 }
 
 /* CSS for first cell */
-.first-cell {
+/* .first-cell {
 
-}
+} */

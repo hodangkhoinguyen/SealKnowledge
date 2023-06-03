@@ -7,8 +7,7 @@
             "Frog"
         ],
         "answer": "B"
-    },
-    {
+    },{
         "question": "How long do Putal Creek salmon live in the ocean?",
         "options": [
             "2-4 days",
@@ -25,19 +24,19 @@
         ],
         "answer": "B"
     }, {
-        "question": "",
+        "question": "What do bats in Davis eat for living?",
         "options": [
-            "",
-            "",
-            ""
+            "fruits",
+            "small worms",
+            "large nocturnal insects"
         ],
-        "answer": "B"
+        "answer": "C"
     }, {
-        "question": "",
+        "question": "When can you begin to spot Short-eared Owls?",
         "options": [
-            "",
-            "",
-            ""
+            "early morning",
+            "late afternoon",
+            "late night"
         ],
         "answer": "B"
     }
