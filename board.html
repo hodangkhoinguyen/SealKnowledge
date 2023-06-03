@@ -20,9 +20,9 @@
 
 <body>
     <section class="game-container">
-        <h2>Game</h2>
+        <h1>Game</h1>
 
-        <section id="board-container">
+        <section class="board-container">
             <img class="bike-img" src="./images/bike1.png" alt="bike-img">
             <img class="bike-img" src="./images/bike2.png" alt="bike-img">
             <img class="bike-img" src="./images/bike3.png" alt="bike-img">
@@ -40,22 +40,32 @@
                 <section class="middle-area">
                     <section class="play-container">
 
-                        <section class="roll-container">
-                            <img class="dice-img" src="./images/dice.png" alt="dice-img">
-                            <button id="rollBtn">ROLL DICE</button>
+                        <section class="dice-container">
+                            <section class="dice-img-container">
+                                <img class="dice-img" src="./images/dice.png" alt="dice-img">
+                            </section>
+                            <section class="roll-container">
+                                <p class="turn-display"></p>
+                                <button id="rollBtn">ROLL DICE</button>
+                            </section>
                             
                             <section class="roll-result-container hidden">
-                                <p>You Rolled</p>
-                                <p class="roll-result">5</p>
-                                <button id="nextQuestion">Next</button>
+                                <p class="turn-display">Your Dice Number:  <span class="roll-result"></span></p>
+                               
+                                <button id="nextQuestion">NEXT</button>
                             </section> 
-
                         </section>
                         <section class="question-container hidden">
                         
                         </section>
                         <section class="status-container hidden">
-                        
+                            <section class="dice-img-container">
+                                <img class="dice-img" src="./images/dice.png" alt="dice-img">
+                            </section>
+                            <section class="answer-container">
+                                <p class="answer-display">Your Answer is: <span class="answer-result"></span></p>
+                                <button id="nextTeamBtn">NEXT TEAM</button>
+                            </section>
                         </section>
                     </section>
                 </section>
@@ -66,6 +76,9 @@
 
             <!-- Last Row -->
             <section id="lower-row" class="row"></section>
+        </section>
+        <section class="final-result hidden">
+            
         </section>
     </section>
 
