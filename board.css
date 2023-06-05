@@ -17,6 +17,12 @@ h1 {
     margin: 1rem;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .game-container {
     display: flex;
     flex-direction: column;
