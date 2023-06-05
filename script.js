@@ -82,6 +82,6 @@
         }
 
         localStorage.setItem("teamname", JSON.stringify(teamname));
-        window.location = "/board.html";
+        window.location.href = "board/board.html";
     });    
 })();
