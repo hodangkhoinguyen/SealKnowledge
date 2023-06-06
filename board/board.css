@@ -65,8 +65,8 @@ body {
 .cell {
     background-color: white;
     border: solid black 1px;
-    height: 10rem;
-    width: 10rem;
+    height: 8rem;
+    width: 8rem;
 }
 
 .play-container {
@@ -147,7 +147,7 @@ button {
 
 .bike-img {
     position: absolute;
-    width: 4rem;
+    width: 3.5rem;
     transition: all .5s ease-in-out;
 }
 
@@ -156,6 +156,8 @@ button {
 }
 
 /* CSS for first cell */
-/* .first-cell {
+.first-cell {
+    background-color: white;
+}
 
-} */
+
