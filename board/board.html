@@ -19,68 +19,71 @@
 </head>
 
 <body>
-    <section class="game-container">
-        <h1>Game</h1>
+    <section id="gameplay">
+        <section class="game-container hidden">
+            <h1>Game</h1>
+            <section class="board-container">
+                <img class="bike-img" src="../images/bike1.png" alt="bike-img">
+                <img class="bike-img" src="../images/bike2.png" alt="bike-img">
+                <img class="bike-img" src="../images/bike3.png" alt="bike-img">
+                <img class="bike-img" src="../images/bike4.png" alt="bike-img">
 
-        <section class="board-container">
-            <img class="bike-img" src="../images/bike1.png" alt="bike-img">
-            <img class="bike-img" src="../images/bike2.png" alt="bike-img">
-            <img class="bike-img" src="../images/bike3.png" alt="bike-img">
-            <img class="bike-img" src="../images/bike4.png" alt="bike-img">
+                <!-- First Row -->
+                <section id="upper-row" class="row"></section>
 
-            <!-- First Row -->
-            <section id="upper-row" class="row"></section>
+                <!-- Middle Rows-->
+                <section class="middle-container">
+                    <!-- First Column -->
+                    <section id="left-column" class="column"></section>
 
-            <!-- Middle Rows-->
-            <section class="middle-container">
-                <!-- First Column -->
-                <section id="left-column" class="column"></section>
+                    <!-- Middle Display Area -->
+                    <section class="middle-area">
+                        <section class="play-container">
 
-                <!-- Middle Display Area -->
-                <section class="middle-area">
-                    <section class="play-container">
-
-                        <section class="dice-container">
-                            <section class="dice-img-container">
-                                <img class="dice-img" src="../images/dice.png" alt="dice-img">
+                            <section class="dice-container">
+                                <section class="dice-img-container">
+                                    <img class="dice-img" src="../images/dice.png" alt="dice-img">
+                                </section>
+                                <section class="roll-container">
+                                    <p class="turn-display"></p>
+                                    <button id="rollBtn">ROLL DICE</button>
+                                </section>
+                                
+                                <section class="roll-result-container hidden">
+                                    <p class="turn-display">You rolled ...<span class="roll-result"></span>!</p>
+                                
+                                    <button id="nextQuestion">NEXT</button>
+                                </section> 
                             </section>
-                            <section class="roll-container">
-                                <p class="turn-display"></p>
-                                <button id="rollBtn">ROLL DICE</button>
-                            </section>
+                            <section class="question-container hidden">
                             
-                            <section class="roll-result-container hidden">
-                                <p class="turn-display">Your Dice Number:  <span class="roll-result"></span></p>
-                               
-                                <button id="nextQuestion">NEXT</button>
-                            </section> 
-                        </section>
-                        <section class="question-container hidden">
-                        
-                        </section>
-                        <section class="status-container hidden">
-                            <section class="dice-img-container">
-                                <img class="dice-img" src="../images/dice.png" alt="dice-img">
                             </section>
-                            <section class="answer-container">
-                                <p class="answer-display">Your Answer is: <span class="answer-result"></span></p>
-                                <button id="nextTeamBtn">NEXT TEAM</button>
+                            <section class="status-container hidden">
+                                <section class="dice-img-container">
+                                    <img class="dice-img" src="../images/dice.png" alt="dice-img">
+                                </section>
+                                <section class="answer-container">
+                                    <p class="answer-display"> <span class="answer-result"></span></p>
+                                    <button id="nextTeamBtn">NEXT TEAM</button>
+                                </section>
                             </section>
                         </section>
                     </section>
+
+                    <!-- Last Column -->
+                    <section id="right-column" class="column"></section>
                 </section>
 
-                <!-- Last Column -->
-                <section id="right-column" class="column"></section>
+                <!-- Last Row -->
+                <section id="lower-row" class="row"></section>
             </section>
+            </section>
+        </section>    
 
-            <!-- Last Row -->
-            <section id="lower-row" class="row"></section>
-        </section>
-        
         <!-- RESULTS PAGE -->
-        <section class="final-result hidden">
+        <section class="final-result">
             <h3>Congratulation!! <span class="team-winner"></span> has won the game!!!</h3>
+            <button id="returnHome">Return Home</button>
         </section>
     </section>
 

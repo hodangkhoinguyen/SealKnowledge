@@ -49,7 +49,6 @@
         document.getElementById('rules').className = 'hidden';
     });
 
-
 /* BUTTON INTERACTION FOR THE USER TEST INSTRUCTIONS*/
     // open overlay
     document.querySelector('.open').addEventListener('click', function(event) {
@@ -82,6 +81,6 @@
         }
 
         localStorage.setItem("teamname", JSON.stringify(teamname));
-        window.location.href = "board/board.html";
+        window.location.href = 'board/board.html';
     });    
 })();

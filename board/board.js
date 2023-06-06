@@ -62,7 +62,7 @@
         questionList = await questionJson.json();
     };
 
-    function setUp () {
+    function setUp() {
         // First row
         for (let i = 0; i < NUM_COL; i++) {
             const newCell = createCell(cellList.length + 1);
@@ -193,7 +193,7 @@
     function displayStatus(isCorrect) {
         statusContainer.classList.remove("hidden");
         if (isCorrect) {
-            answerResult.textContent = `Correct. You are allowed to move ${stepNum} steps`;
+            answerResult.textContent = `Yay, the answer is correct! You will now move ${stepNum} steps :)`;
             if (playerList[Player.currTurn].position + stepNum >= Player.cellList.length) {
                 boardContainer.classList.add("hidden");
                 displayFinalResult(playerList[Player.currTurn]);
@@ -204,7 +204,7 @@
             }
         }
         else {
-            answerResult.textContent = `Incorrect. Your team cannot move`;
+            answerResult.textContent = `Oh no, the answer is incorrect. You have a flat tire for this round :(`;
         }
         Player.nextTurn();
 
@@ -220,11 +220,16 @@
         finalResultContainer.classList.remove("hidden");
         const teamWinner = document.getElementsByClassName("team-winner")[0];
         teamWinner.textContent = player.name;
+
+        // returning back to home page
+        document.querySelector('#returnHome').addEventListener('click', function (event) {
+            window.location.href = '../index.html';
+        });
     }
 
     getQuestionList()
-    .then(() => {
-        setUp();
-    })
+        .then(() => {
+            setUp();
+        })
 })();
 
