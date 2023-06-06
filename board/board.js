@@ -93,7 +93,7 @@
 
         function createCell(num) {
             const cell = document.createElement("section");
-            cell.className = "cell";
+            cell.className = `cell cell-${num}`;
             cell.textContent = num;
             return cell;
         }
@@ -102,10 +102,10 @@
         cellList[0].classList.add("first-cell");
 
         playerList = [
-            new Player(teamname[0], 0, mover1, 10, 10),
-            new Player(teamname[1], 0, mover2, 10, 80),
-            new Player(teamname[2], 0, mover3, 80, 10),
-            new Player(teamname[3], 0, mover4, 80, 80)
+            new Player(teamname[0], 0, mover1, 8, 8),
+            new Player(teamname[1], 0, mover2, 8, 75),
+            new Player(teamname[2], 0, mover3, 75, 8),
+            new Player(teamname[3], 0, mover4, 75, 75)
         ];
 
         playerList.forEach(p => p.move(0));

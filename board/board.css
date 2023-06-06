@@ -147,7 +147,7 @@ button {
 
 .bike-img {
     position: absolute;
-    width: 3.5rem;
+    width: 3rem;
     transition: all .5s ease-in-out;
 }
 
@@ -156,8 +156,11 @@ button {
 }
 
 /* CSS for first cell */
-.first-cell {
-    background-color: white;
+.cell-1 {
+    background-image: url("../images/egghead.png");
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 3rem;
 }
 
 
