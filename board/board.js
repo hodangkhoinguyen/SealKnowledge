@@ -131,6 +131,7 @@
 
             questionContainer.innerHTML = "";
             questionContainer.appendChild(createQuestion(problem));
+            questionContainer.appendChild(createImageQuestion(problem));
         });
     }
 
@@ -215,6 +216,12 @@
         });
     }
 
+    function createImageQuestion(problem) {
+        const questionDiv = document.createElement("section");
+        questionDiv.className = "question-image";
+        questionDiv.innerHTML = "<img src='../images/a_blueheron.png'/>";
+        return questionDiv;
+    }
     const finalResultContainer = document.getElementsByClassName("final-result")[0];
     function displayFinalResult(player) {
         finalResultContainer.classList.remove("hidden");

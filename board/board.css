@@ -74,7 +74,7 @@ body {
     border: solid #9A694E 1px;
     border-radius: 0.25rem;
     height: 90%;
-    width: 80%;
+    width: 95%;
 }
 
 .dice-container {
@@ -86,21 +86,31 @@ body {
 }
 
 .dice-container > section {
-    width: 40%;
+    width: 45%;
 }
 
 .question-container {
-    display: flex;
-    justify-content: left;
-    align-items: center;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-container > section {
+    width: 45%;
 }
 
 .question-display {
-    margin-left: 4rem;
     display: flex;
     flex-direction: column;
+    margin: 1rem 3rem;
+}
+
+.question-image > img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 10px;
 }
 
 .question-item {
@@ -138,11 +148,11 @@ button {
 }
 
 .status-container > section {
-    width: 40%;
+    width: 45%;
 }
 
 .answer-display {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .bike-img {
@@ -156,7 +166,7 @@ button {
 }
 
 /* CSS for first cell */
-.cell-1 {
+.cell-8 {
     background-image: url("../images/egghead.png");
     background-position: center;
 	background-repeat: no-repeat;
