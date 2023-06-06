@@ -194,7 +194,7 @@
     function displayStatus(isCorrect) {
         statusContainer.classList.remove("hidden");
         if (isCorrect) {
-            answerResult.textContent = `Yay, the answer is correct! You will now move ${stepNum} steps :)`;
+            answerResult.textContent = `The answer is correct! You will now move ${stepNum} steps :)`;
             if (playerList[Player.currTurn].position + stepNum >= Player.cellList.length) {
                 boardContainer.classList.add("hidden");
                 displayFinalResult(playerList[Player.currTurn]);
@@ -205,7 +205,7 @@
             }
         }
         else {
-            answerResult.textContent = `Oh no, the answer is incorrect. You have a flat tire for this round :(`;
+            answerResult.textContent = `The answer is incorrect. You have a flat tire for this round :(`;
         }
         Player.nextTurn();
 

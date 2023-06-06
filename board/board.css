@@ -170,6 +170,20 @@ button {
     background-image: url("../images/egghead.png");
     background-position: center;
 	background-repeat: no-repeat;
+	background-size: 5rem;
+}
+
+.cell-12 {
+    background-image: url("../images/international.png");
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 10rem;
+}
+
+.cell-19 {
+    background-image: url("../images/water-tank.png");
+    background-position: center;
+	background-repeat: no-repeat;
 	background-size: 3rem;
 }
 
