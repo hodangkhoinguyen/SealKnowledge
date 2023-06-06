@@ -1,6 +1,6 @@
-(function() {
+(function () {
     'use strict';
-    
+
     class Player {
         static cellList;
         static currTurn;
@@ -26,6 +26,8 @@
         }
     }
 
+    let questionList;
+
     const boardContainer = document.getElementsByClassName("board-container")[0];
     const upperRow = document.getElementById("upper-row");
     const lowerRow = document.getElementById("lower-row");
@@ -37,60 +39,11 @@
     const mover4 = document.getElementsByClassName("bike-img")[3];
 
     const teamname = JSON.parse(localStorage.getItem("teamname"));
-    console.log(teamname);
     const NUM_ROW = 5;
     const NUM_COL = 8;
     let cellList = [];
     let stepNum;
-
-    // First row
-    for (let i = 0; i < NUM_COL; i++) {
-        const newCell = createCell(cellList.length + 1);
-        cellList.push(newCell);
-        upperRow.appendChild(newCell);
-    }
-
-    // Right Column
-    for (let i = 0; i < NUM_ROW - 2; i++) {
-        const newCell = createCell(cellList.length + 1);
-        cellList.push(newCell);
-        rightColumn.appendChild(newCell);
-    }
-
-    // Last row
-    for (let i = 0; i < NUM_COL; i++) {
-        const newCell = createCell(cellList.length + 1);
-        cellList.push(newCell);
-        lowerRow.appendChild(newCell);
-    }
-
-    // Left Column
-    for (let i = 0; i < NUM_ROW - 2; i++) {
-        const newCell = createCell(cellList.length + 1);
-        cellList.push(newCell);
-        leftColumn.appendChild(newCell);
-    }    
-
-    function createCell(num) {
-        const cell = document.createElement("section");
-        cell.className = "cell";
-        cell.textContent = num;
-        return cell;
-    }
-
-    // Add a specific classname for the first cell
-    cellList[0].classList.add("first-cell");
-
-    const playerList = [
-        new Player(teamname[0], 0, mover1, 10, 10),
-        new Player(teamname[1], 0, mover2, 10, 80),
-        new Player(teamname[2], 0, mover3, 80, 10),
-        new Player(teamname[3], 0, mover4, 80, 80)
-    ];
-
-    playerList.forEach(p => p.move(0));
-    Player.cellList = cellList;
-    Player.currTurn = 0;
+    let playerList;
 
     const rollContainer = document.getElementsByClassName("roll-container")[0];
     const diceContainer = document.getElementsByClassName("dice-container")[0];
@@ -99,30 +52,87 @@
     const rollResult = document.getElementsByClassName("roll-result")[0];
     const rollResultContainer = document.getElementsByClassName("roll-result-container")[0];
     const displayTurn = document.getElementsByClassName("turn-display")[0];
-    displayTurn.textContent = `${playerList[Player.currTurn].name}'s turn`;
 
-    rollBtn.addEventListener("click", function () {
-        stepNum = Math.floor(Math.random() * 6) + 1;
-        rollResult.textContent = stepNum;
-        rollResultContainer.classList.remove("hidden");
-        rollContainer.classList.add("hidden");
-    });
+    const statusContainer = document.getElementsByClassName("status-container")[0];
+    const answerResult = document.getElementsByClassName("answer-result")[0];
+    const nextTeamBtn = document.getElementById("nextTeamBtn");
 
-    const nextBtn = document.getElementById("nextQuestion");
-    nextBtn.addEventListener("click", function () {
-        rollContainer.classList.remove("hidden");
-        rollResultContainer.classList.add("hidden");
-        diceContainer.classList.add("hidden");
-        questionContainer.classList.remove("hidden");
-        let problem = {
-            question: "What is the name of this animal?",
-            answers: ["Blue Heron", "Muskrat", "Frog"],
-            key: "Blue Heron"
-        };
+    async function getQuestionList() {
+        const questionJson = await fetch('../mock_questions.json');
+        questionList = await questionJson.json();
+    };
 
-        questionContainer.innerHTML = "";
-        questionContainer.appendChild(createQuestion(problem));
-    });
+    function setUp () {
+        // First row
+        for (let i = 0; i < NUM_COL; i++) {
+            const newCell = createCell(cellList.length + 1);
+            cellList.push(newCell);
+            upperRow.appendChild(newCell);
+        }
+
+        // Right Column
+        for (let i = 0; i < NUM_ROW - 2; i++) {
+            const newCell = createCell(cellList.length + 1);
+            cellList.push(newCell);
+            rightColumn.appendChild(newCell);
+        }
+
+        // Last row
+        for (let i = 0; i < NUM_COL; i++) {
+            const newCell = createCell(cellList.length + 1);
+            cellList.push(newCell);
+            lowerRow.appendChild(newCell);
+        }
+
+        // Left Column
+        for (let i = 0; i < NUM_ROW - 2; i++) {
+            const newCell = createCell(cellList.length + 1);
+            cellList.push(newCell);
+            leftColumn.appendChild(newCell);
+        }
+
+        function createCell(num) {
+            const cell = document.createElement("section");
+            cell.className = "cell";
+            cell.textContent = num;
+            return cell;
+        }
+
+        // Add a specific classname for the first cell
+        cellList[0].classList.add("first-cell");
+
+        playerList = [
+            new Player(teamname[0], 0, mover1, 10, 10),
+            new Player(teamname[1], 0, mover2, 10, 80),
+            new Player(teamname[2], 0, mover3, 80, 10),
+            new Player(teamname[3], 0, mover4, 80, 80)
+        ];
+
+        playerList.forEach(p => p.move(0));
+        Player.cellList = cellList;
+        Player.currTurn = 0;
+        displayTurn.textContent = `${playerList[Player.currTurn].name}'s turn`;
+
+        rollBtn.addEventListener("click", function () {
+            stepNum = Math.floor(Math.random() * 6) + 1;
+            rollResult.textContent = stepNum;
+            rollResultContainer.classList.remove("hidden");
+            rollContainer.classList.add("hidden");
+        });
+
+        const nextBtn = document.getElementById("nextQuestion");
+        nextBtn.addEventListener("click", function () {
+            rollContainer.classList.remove("hidden");
+            rollResultContainer.classList.add("hidden");
+            diceContainer.classList.add("hidden");
+            questionContainer.classList.remove("hidden");
+            const randomNum = Math.floor(Math.random() * questionList.length);
+            let problem = questionList[randomNum];
+
+            questionContainer.innerHTML = "";
+            questionContainer.appendChild(createQuestion(problem));
+        });
+    }
 
     function createQuestion(problem) {
         const questionDiv = document.createElement("section");
@@ -136,7 +146,7 @@
         questionLabel.textContent = problem.question;
         questionDiv.appendChild(questionLabel);
 
-        const answerList = problem.answers;
+        const answerList = problem.options;
         for (let answer of answerList) {
             const sectionAnswer = document.createElement("section");
             sectionAnswer.className = "answer-item";
@@ -157,7 +167,7 @@
 
         // const newDiv = document.createElement("div");
         // const wrongMessage = document.createTextNode("Sorry, you got the answer wrong and got a flat tire :(");
-        const answerKey = problem.key;
+        const answerKey = problem.answer;
         const button = document.createElement("button");
         button.textContent = "Submit Answer";
         button.addEventListener("click", function () {
@@ -180,9 +190,6 @@
         return questionDiv;
     }
 
-    const statusContainer = document.getElementsByClassName("status-container")[0];
-    const answerResult = document.getElementsByClassName("answer-result")[0];
-    const nextTeamBtn = document.getElementById("nextTeamBtn");
     function displayStatus(isCorrect) {
         statusContainer.classList.remove("hidden");
         if (isCorrect) {
@@ -204,7 +211,7 @@
         nextTeamBtn.addEventListener("click", function () {
             diceContainer.classList.remove("hidden");
             statusContainer.classList.add("hidden");
-            displayTurn.textContent = `${playerList[Player.currTurn].name}'s turn`;    
+            displayTurn.textContent = `${playerList[Player.currTurn].name}'s turn`;
         });
     }
 
@@ -214,5 +221,10 @@
         const teamWinner = document.getElementsByClassName("team-winner")[0];
         teamWinner.textContent = player.name;
     }
+
+    getQuestionList()
+    .then(() => {
+        setUp();
+    })
 })();
 
