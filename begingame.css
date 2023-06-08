@@ -15,18 +15,18 @@
     color: white;
 }
 
-#groupBtn {
+#selectTopic {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-#groupBtn label {
+#selectTopic label {
     padding: 0.2em;
     margin: 0.5em 0;
 }
 
-#groupBtn label input {
+#selectTopic label input {
     border: none;
     border-bottom: black 2px solid;
     background-color: #B1D0FF;
