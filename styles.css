@@ -24,7 +24,6 @@ h2 {
 /* home CSS */
 .home {
     display: flex;
-    display: row;
     justify-content: center;
     margin-top: 3em;
     background-color: #B1D0FF;
