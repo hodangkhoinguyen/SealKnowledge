@@ -21,8 +21,8 @@
 <body>
     <section id="gameplay">
         <section class="game-container">
-            <h1>Game</h1>
-            <section class="board-container">
+            <h1>Seal Your Knowledge</h1>
+            <section class="board-container ">
                 <img class="bike-img" src="../images/bike1.png" alt="bike-img">
                 <img class="bike-img" src="../images/bike2.png" alt="bike-img">
                 <img class="bike-img" src="../images/bike3.png" alt="bike-img">
@@ -46,25 +46,26 @@
                                 </section>
                                 <section class="roll-container">
                                     <p class="turn-display"></p>
-                                    <button id="rollBtn">ROLL DICE</button>
+                                    <button id="rollBtn">Roll Dice</button>
                                 </section>
                                 
                                 <section class="roll-result-container hidden">
                                     <p class="turn-display">You rolled ...<span class="roll-result"></span>!</p>
                                 
-                                    <button id="nextQuestion">NEXT</button>
+                                    <button id="nextQuestion">Next</button>
                                 </section> 
                             </section>
                             <section class="question-container hidden">
                             
                             </section>
                             <section class="status-container hidden">
-                                <section class="dice-img-container">
-                                    <img class="dice-img" src="../images/dice.png" alt="dice-img">
+                                <section class="status-header">
+                                    <h2 class="status-header-text">Incorrect</h2>
                                 </section>
                                 <section class="answer-container">
+                                    <h2 class="answer-alert">Flat Tire Alert</h2>
                                     <p class="answer-display"> <span class="answer-result"></span></p>
-                                    <button id="nextTeamBtn">NEXT TEAM</button>
+                                    <button id="nextTeamBtn">Next Team</button>
                                 </section>
                             </section>
                         </section>
@@ -77,13 +78,12 @@
                 <!-- Last Row -->
                 <section id="lower-row" class="row"></section>
             </section>
-            </section>
-        </section>    
 
-        <!-- RESULTS PAGE -->
-        <section class="final-result hidden">
-            <h3>Congratulation!! <span class="team-winner"></span> has won the game!!!</h3>
-            <button id="returnHome">Return Home</button>
+            <!-- RESULTS PAGE -->
+            <section class="final-result hidden">
+                <h3>Congratulation!! <span class="team-winner"></span> has won the game!!!</h3>
+                <button id="returnHome" href="../index.html">Return Home</button>
+            </section>
         </section>
     </section>
 

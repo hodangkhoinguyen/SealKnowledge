@@ -41,35 +41,23 @@
     // open overlay
     document.querySelector('.ruleBtn').addEventListener('click', function(event) {
         event.preventDefault();
-        document.getElementById('rules').className = 'show';
+        document.getElementById('rules').classList.remove('hidden');
     });
     // closing overlay
     document.querySelector('.closeRule').addEventListener('click', function(event) {
         event.preventDefault();
-        document.getElementById('rules').className = 'hidden';
-    });
-
-/* BUTTON INTERACTION FOR THE USER TEST INSTRUCTIONS*/
-    // open overlay
-    document.querySelector('.open').addEventListener('click', function(event) {
-        event.preventDefault();
-        document.getElementById('overlay').className = 'show';
-    });
-    // closing overlay
-    document.querySelector('.close').addEventListener('click', function(event) {
-        event.preventDefault();
-        document.getElementById('overlay').className = 'hidden';
+        document.getElementById('rules').classList.add('hidden');
     });
 
 /* login button overlay */
     document.querySelector('#login').addEventListener('click', function(event) {
         event.preventDefault();
-        document.querySelector('#loginOverlay').className = 'show';
+        document.querySelector('#loginOverlay').classList.remove('hidden');
     });
     // closing overlay
     document.querySelector('#closeOverlay').addEventListener('click', function(event) {
         event.preventDefault();
-        document.querySelector('#loginOverlay').className = 'hidden';
+        document.querySelector('#loginOverlay').classList.add('hidden');
     });
 
     const startBtn = document.getElementById("start-game");

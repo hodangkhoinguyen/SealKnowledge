@@ -41,8 +41,6 @@ h2 {
 
 img {
     display: flex;
-    max-width: 90%;
-    max-height: 60%;
     justify-content: center;
 }
 
@@ -233,6 +231,28 @@ button.ruleBtn {
     background-color: rgb(212, 31, 61);
 }
 
-.show {
-    display: block;
+#groupBtn > section {
+    display: flex;
+}
+
+.color-square {
+    border-radius: 5px;
+    height: 2rem;
+    width: 2rem;
+}
+
+.square-1 {
+    background-color: black;
+}
+
+.square-2 {
+    background-color: red;
+}
+
+.square-3 {
+    background-color: blue;
+}
+
+.square-4 {
+    background-color: green;
 }

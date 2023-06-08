@@ -6,7 +6,8 @@
             "Blue Heron",
             "Frog"
         ],
-        "answer": "Blue Heron"
+        "answer": "Blue Heron",
+        "photo": "../images/a_blueheron.png"
     },
     {
         "question": "How long do Putal Creek salmon live in the ocean?",
@@ -15,7 +16,8 @@
             "2-4 months",
             "2-4 years"
         ],
-        "answer": "2-4 years"
+        "answer": "2-4 years",
+        "photo": "../images/a_salmon.png"
     },
     {
         "question": "What is true about the muskrat in Putah Creek?",
@@ -24,7 +26,8 @@
             "Their tails are like paddles",
             "They are a type of a duck"
         ],
-        "answer": "Their tails are like paddles"
+        "answer": "Their tails are like paddles",
+        "photo": "../images/a_muskrat.png"
     },
     {
         "question": "What do bats in Davis eat for living?",
@@ -33,7 +36,8 @@
             "small worms",
             "large nocturnal insects"
         ],
-        "answer": "large nocturnal insects"
+        "answer": "large nocturnal insects",
+        "photo": "../images/a_bats.png"
     }, {
         "question": "When can you begin to spot Short-eared Owls?",
         "options": [
@@ -41,6 +45,7 @@
             "late afternoon",
             "late night"
         ],
-        "answer": "late afternoon"
+        "answer": "late afternoon",
+        "photo": "../images/a_shortearOwl.png"
     }
 ]
