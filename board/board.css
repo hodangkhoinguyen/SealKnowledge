@@ -222,3 +222,15 @@ button {
 .hidden {
     display: none;
 }
+
+#returnHome {
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    background-color: rgb(255, 77, 106);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: black 5px 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
