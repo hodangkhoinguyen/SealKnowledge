@@ -42,7 +42,6 @@
     margin: 0.5em;
     padding: 0.5em 1em;
     max-width: 30%;
-    align-items: right;
     background-color: rgb(255, 113, 113);
     border: none;
     border-radius: 15px;
@@ -54,7 +53,6 @@
     margin: 0.5em;
     padding: 0.5em 1em;
     max-width: 30%;
-    align-items: right;
     background-color: white;
     border: none;
     border-radius: 15px;
