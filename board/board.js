@@ -191,9 +191,11 @@
         return questionDiv;
     }
 
+    /**************************** CHANGE THE HEADER AND ALERT OF STATUS PLEASEEEEE */
     function displayStatus(isCorrect) {
         statusContainer.classList.remove("hidden");
         if (isCorrect) {
+            statusContainer.style.backgroundColor = "green";
             answerResult.textContent = `The answer is correct! You will now move ${stepNum} steps :)`;
             if (playerList[Player.currTurn].position + stepNum >= Player.cellList.length) {
                 boardContainer.classList.add("hidden");
@@ -205,6 +207,7 @@
             }
         }
         else {
+            statusContainer.style.backgroundColor = "rgba(219, 33, 56, 0.38)";
             answerResult.textContent = `The answer is incorrect. You have a flat tire for this round :(`;
         }
         Player.nextTurn();
@@ -219,7 +222,7 @@
     function createImageQuestion(problem) {
         const questionDiv = document.createElement("section");
         questionDiv.className = "question-image";
-        questionDiv.innerHTML = "<img src='../images/a_blueheron.png'/>";
+        questionDiv.innerHTML = `<img src="${problem.photo}"/>`;
         return questionDiv;
     }
     const finalResultContainer = document.getElementsByClassName("final-result")[0];

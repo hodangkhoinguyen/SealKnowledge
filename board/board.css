@@ -143,16 +143,43 @@ button {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.status-header {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.status-header h2 {
+    font-weight: bold;
+}
+
+.answer-container {
+    border-radius: 10px;
+    background-color: #494949;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
 .status-container > section {
-    width: 45%;
+    width: 80%;
 }
 
 .answer-display {
-    font-size: 1rem;
+    font-size: 1.5rem;
+}
+
+#nextTeamBtn {
+    background-color: #9A694E;
 }
 
 .bike-img {

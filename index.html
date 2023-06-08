@@ -15,7 +15,6 @@
    
     <!-- stylesheet -->
     <link href="styles.css" rel="stylesheet">
-    <link href="onboarding.css" rel="stylesheet">
     <link href="begingame.css" rel="stylesheet">
 
     <!-- javascript file -->
@@ -49,25 +48,6 @@
         </section>
     </section>
 
-    <section id="overlay" class="overlayStyle hidden">
-        <section id="content">
-            <h2>Instruction of the user test.</h2>
-            <p>
-                First of all, thank you for your time to participate in this user test!
-            </p>
-            <p>
-                There are 3 tasks you would need to perform during this session.
-                <ol>
-                    <li>Play the game as a guest</li>
-                    <li>Locate the rules section</li>
-                </ol>
-            </p>
-            <p>
-                Once you're done, we will ask you some questions regarding your experience with the game.
-            </p>
-            <button class="close">close</button>
-        </section>
-    </section>
 <!-- — — — — — — — — — — — — — OVERLAY END — — — — — — — — — — — — — -->
 
 <!-- — — — — — — — — — — — — — landing page html BEGIN — — — — — — — — — — — — — -->
@@ -76,11 +56,6 @@
         <section id="leftHalf">
             <h1>Seal Your Knowledge</h1>
             <img src="images/seal.png" alt="centennial seal image" width="500" height="500">
-            
-            <!-- user test button -->
-            <section id="userTestBtn" class="open">
-                <button>User Test Guides</button>
-            </section>
         </section>
 
         <section id="loginForm">
@@ -106,7 +81,7 @@
 
             <section id="guest">
                 <p>Don't have an account yet?</p>
-                <button>Create Account</button>
+                <button id="createAccount">Create Account</button>
                 <button id="continueGuest">Continue As Guest</button>
             </section>
         </section>
@@ -142,10 +117,10 @@
         <h3>Step 2: Select Your Team Names</h3>
 
         <section id="groupBtn">
-            <label>Team 1: <input class="teamname" placeholder="   team 1"></label></label>
-            <label>Team 2: <input class="teamname" placeholder="   team 2"></label></label>
-            <label>Team 3: <input class="teamname" placeholder="   team 3"></label></label>
-            <label>Team 4: <input class="teamname" placeholder="   team 4"></label></label>
+            <section><label>Team 1: <input class="teamname" placeholder="   team 1"></label><section class="color-square square-1"></section></section>
+            <section><label>Team 2: <input class="teamname" placeholder="   team 2"></label><section class="color-square square-2"></section></section>
+            <section><label>Team 3: <input class="teamname" placeholder="   team 3"></label><section class="color-square square-3"></section></section>
+            <section><label>Team 4: <input class="teamname" placeholder="   team 4"></label><section class="color-square square-4"></section></section>
         </section>
         <section id="startBtn">
             <button id="start-game">Start Game</button>
