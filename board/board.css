@@ -126,15 +126,6 @@ body {
     flex-direction: column;
 } */
 
-button {
-    background-color: #393939;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-    padding: 0.6rem 1rem;
-}
-
 .turn-display {
     font-size: 2rem;
 }
@@ -178,8 +169,15 @@ button {
     font-size: 1.5rem;
 }
 
-#nextTeamBtn {
-    background-color: #9A694E;
+button {
+    padding: 0.6rem 1rem;
+    background-color: rgb(255, 77, 106);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: black 5px 5px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .bike-img {
@@ -219,4 +217,8 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.hidden {
+    display: none;
 }

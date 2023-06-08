@@ -195,7 +195,7 @@
     function displayStatus(isCorrect) {
         statusContainer.classList.remove("hidden");
         if (isCorrect) {
-            statusContainer.style.backgroundColor = "green";
+            statusContainer.style.backgroundColor = "rgb(60, 179, 113)";
             answerResult.textContent = `The answer is correct! You will now move ${stepNum} steps :)`;
             if (playerList[Player.currTurn].position + stepNum >= Player.cellList.length) {
                 boardContainer.classList.add("hidden");
