@@ -194,9 +194,13 @@
     /**************************** CHANGE THE HEADER AND ALERT OF STATUS PLEASEEEEE */
     function displayStatus(isCorrect) {
         statusContainer.classList.remove("hidden");
+        const statusHeader = document.getElementsByClassName("status-header-text")[0];
+        const statusAlert = document.getElementsByClassName("answer-alert")[0];
         if (isCorrect) {
             statusContainer.style.backgroundColor = "rgb(60, 179, 113)";
-            answerResult.textContent = `The answer is correct! You will now move ${stepNum} steps :)`;
+            statusHeader.textContent = "Correct";
+            statusAlert.textContent = "Woohoo";
+            answerResult.textContent = `The answer is correct! You will now move ${stepNum} step(s) :)`;
             if (playerList[Player.currTurn].position + stepNum >= Player.cellList.length) {
                 boardContainer.classList.add("hidden");
                 displayFinalResult(playerList[Player.currTurn]);
@@ -207,6 +211,8 @@
             }
         }
         else {
+            statusHeader.textContent = "Incorrect";
+            statusAlert.textContent = "Flat Tire Alert";
             statusContainer.style.backgroundColor = "rgba(219, 33, 56, 0.38)";
             answerResult.textContent = `The answer is incorrect. You have a flat tire for this round :(`;
         }
