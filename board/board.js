@@ -38,6 +38,9 @@
     const mover3 = document.getElementsByClassName("bike-img")[2];
     const mover4 = document.getElementsByClassName("bike-img")[3];
 
+    const diceList = ["one.png", "two.png", "three.png", "four.png", "five.png", "six.png"];
+    const diceImg = document.getElementsByClassName("dice-img")[0];
+
     const teamname = JSON.parse(localStorage.getItem("teamname"));
     const NUM_ROW = 5;
     const NUM_COL = 8;
@@ -115,6 +118,7 @@
 
         rollBtn.addEventListener("click", function () {
             stepNum = Math.floor(Math.random() * 6) + 1;
+            diceImg.src = `../images/${diceList[stepNum-1]}`;
             rollResult.textContent = stepNum;
             rollResultContainer.classList.remove("hidden");
             rollContainer.classList.add("hidden");
@@ -217,6 +221,7 @@
             answerResult.textContent = `The answer is incorrect. You have a flat tire for this round :(`;
         }
         Player.nextTurn();
+        diceImg.src = "../images/dice.png";
 
         nextTeamBtn.addEventListener("click", function () {
             diceContainer.classList.remove("hidden");
@@ -231,6 +236,7 @@
         questionDiv.innerHTML = `<img src="${problem.photo}"/>`;
         return questionDiv;
     }
+
     const finalResultContainer = document.getElementsByClassName("final-result")[0];
     function displayFinalResult(player) {
         finalResultContainer.classList.remove("hidden");
