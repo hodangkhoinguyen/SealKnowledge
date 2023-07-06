@@ -69,9 +69,12 @@ body {
     width: 8rem;
 }
 
+.play-container, .dice-container, .question-container {
+    background-color: aliceblue;
+}
+
 .play-container {
-    background-color: #F6DBC8;
-    border: solid #9A694E 1px;
+    border: solid #B1D0FF 1px;
     border-radius: 0.25rem;
     height: 90%;
     width: 95%;

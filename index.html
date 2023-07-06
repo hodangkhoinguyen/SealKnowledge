@@ -38,7 +38,7 @@
                 <li>If you answer correctly, the movers will move as the number you rolled. However, if the question is incorrect then the movers will not move forward.</li>
             </ol>
 
-            <h4>Safety Rules!</h4>
+            <h4>General Rules!</h4>
             <ol>
                 <li>Raise your hand before shouting the answer!</li>
                 <li>Be understanding even if your team member gets the question wrong</li>
@@ -91,14 +91,19 @@
 <!-- — — — — — — — — — — — — — select question set BEGIN — — — — — — — — — — — — — -->
     <section class="beginGame sectionStyle hidden">
         <i id="backHome" class="fa-solid fa-arrow-left"></i>
-        <h1>Begin Game</h1>
-        <h3>Step 1: Select a Question Set</h3>
+        <section id="q-set-select">
+            <h1>Begin Game</h1>
+            <h3>Step 1: Select a Question Set</h3>
 
-        <section id="selectTopic">
-            <button id="questionSelect" class="whiteBtn">Putah Creek Animals and Plants</button>
-            <button id="patwin" class="whiteBtn">Patwin People</button>
+            <section id="selectTopic">
+                <button id="questionSelect" class="whiteBtn">Putah Creek Wildlife</button>
+                <button id="patwin" class="whiteBtn">Patwin People</button>
+            </section>
         </section>
 
+        <section id="questionImg">
+            <img src="images/question.png" alt="question image" width="350" height="500">
+        </section>
     </section>
 <!-- — — — — — — — — — — — — — select question set END — — — — — — — — — — — — — -->
 
@@ -113,17 +118,18 @@
     <section class="teamSelect sectionStyle hidden">
         <i id="backBegin" class="fa-solid fa-arrow-left"></i>
         <h1>Begin Game</h1>
-        <h2>You are about to play the game with the question set, <em>Putah Creek Animals and Plants!</em></h2>
-        <h3>Step 2: Select Your Team Names</h3>
+        <h2>You are about to play the game with the question set, <em>Putah Creek Wildlife!</em></h2>
+        <h3>Step 2: Enter Your Team Names</h3>
 
+        <!-- I'M HAVING TROUBLE MAKING ALL PARTS REQUIRED FOR THIS FORM -->
         <section id="groupBtn">
-            <section><label>Team 1: <input class="teamname" placeholder="   team 1"></label><section class="color-square square-1"></section></section>
-            <section><label>Team 2: <input class="teamname" placeholder="   team 2"></label><section class="color-square square-2"></section></section>
-            <section><label>Team 3: <input class="teamname" placeholder="   team 3"></label><section class="color-square square-3"></section></section>
-            <section><label>Team 4: <input class="teamname" placeholder="   team 4"></label><section class="color-square square-4"></section></section>
+            <section><label>Team 1: <input class="teamname" placeholder="   team 1" required></label><section class="color-square square-1"></section></section>
+            <section><label>Team 2: <input class="teamname" placeholder="   team 2" required></label><section class="color-square square-2"></section></section>
+            <section><label>Team 3: <input class="teamname" placeholder="   team 3" required></label><section class="color-square square-3"></section></section>
+            <section><label>Team 4: <input class="teamname" placeholder="   team 4" required></label><section class="color-square square-4"></section></section>
         </section>
         <section id="startBtn">
-            <button id="start-game">Start Game</button>
+            <button type="submit" id="start-game">Start Game</button>
         </section>
 
     </section>

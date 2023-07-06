@@ -110,6 +110,24 @@ button:hover {
     cursor: pointer;
 }
 
+/* question set selection - guest flow */
+.beginGame {
+    display:flex;
+}
+
+section#selectTopic {
+    width: 60vw;
+}
+
+#q-set-select {
+    flex:1;
+}
+
+#questionImg {
+    text-align: center;
+    margin: 0;
+    flex: 2;
+}
 
 /* all sections style */
 section.sectionStyle {
@@ -124,6 +142,7 @@ section.sectionStyle {
     cursor: pointer;
 }
 /* all section style END */
+
 
 .hidden {
     display: none;
@@ -230,8 +249,30 @@ button.ruleBtn {
     background-color: rgb(212, 31, 61);
 }
 
+.closeRule {
+    padding: 0.3em 0.8em;
+    max-width: 100%;
+    background-color: rgb(255, 77, 106);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: black 5px 5px;
+    font-size: 15px;
+}
+
 #groupBtn > section {
     display: flex;
+}
+
+#startBtn button:hover {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    max-width: 30%;
+    background-color: rgb(212, 31, 61);
+    border: none;
+    border-radius: 15px;
+    box-shadow: black 5px 5px;
+    font-size: 20px;
 }
 
 .color-square {
