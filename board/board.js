@@ -217,7 +217,7 @@
         else {
             statusHeader.textContent = "Incorrect";
             statusAlert.textContent = "Flat Tire Alert";
-            statusContainer.style.backgroundColor = "rgba(240, 121, 108, 94)";
+            statusContainer.style.backgroundColor = "#FF6F64";
             answerResult.textContent = `The answer is incorrect. You have a flat tire for this round :(`;
         }
         Player.nextTurn();
