@@ -1,6 +1,6 @@
 /*  universal CSS*/
 * {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Mali', cursive;
 }
 
 html {
@@ -8,7 +8,7 @@ html {
 }
 
 h1, h2 {
-    font-family: 'Life Savers', cursive;
+    font-family: 'Gluten', cursive;
 }
 
 h1 {
@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-    margin: 0 1em 0.3em 0;
+    margin: 1.5em 1em 0.3em 0;
     font-size: 30px;
 }
 
@@ -25,8 +25,9 @@ h2 {
 .home {
     display: flex;
     justify-content: center;
-    margin-top: 3em;
-    background-color: #B1D0FF;
+    background-image: url('images/e_background.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
     max-width: 100vw;
     max-height: 100vh;
 }
@@ -57,11 +58,13 @@ img {
     display: flex;
     flex-direction: column;
     margin: 1em 1em 1em 0;
+    max-width: 50%;
 }
 
 #loginInput input {
     width: 80%;
-    border: black 1px solid;
+    border: none;
+    background-color: rgb(169, 169, 169);
     border-radius: 10px;
     margin: 0.2em;
     padding: 0.4em 1.5em;
@@ -70,7 +73,7 @@ img {
 #loginInput button {
     margin-top: 1em;
     padding: 0.2em 1em;
-    max-width: 30%;
+    max-width: 40%;
     background-color: #438EFF;
     color: white;
     border: none;
@@ -92,7 +95,7 @@ img {
     margin: 0.4em 0;
     justify-content: left;
     padding: 0.3em 0.3em;
-    max-width: 60%;
+    max-width: 40%;
     text-align: center;
     background-color: white;
     border: black solid 1px;
@@ -113,29 +116,28 @@ button:hover {
 /* question set selection - guest flow */
 .beginGame {
     display:flex;
+    background-image: url('images/q_background.png');
+    background-image: 100%;
 }
 
 section#selectTopic {
     width: 60vw;
-}
+    height: 80vh;
 
-#q-set-select {
-    flex:1;
-}
-
-#questionImg {
-    text-align: center;
-    margin: 0;
-    flex: 2;
 }
 
 /* all sections style */
-section.sectionStyle {
+/* section.sectionStyle {
     margin: 5em;
+} */
+
+.q-set-select h2 {
+    padding-top: 2em;
 }
 
 .fa-arrow-left {
     font-size: 40px;
+    margin: 1em 1em;
 }
 
 .fa-arrow-left:hover {
