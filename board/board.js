@@ -39,7 +39,6 @@
     const mover4 = document.getElementsByClassName("bike-img")[3];
 
     const diceList = ["one.png", "two.png", "three.png", "four.png", "five.png", "six.png"];
-    const diceImg = document.getElementsByClassName("dice-img")[0];
 
     const teamname = JSON.parse(localStorage.getItem("teamname"));
     const NUM_ROW = 5;
@@ -52,8 +51,7 @@
     const diceContainer = document.getElementsByClassName("dice-container")[0];
     const questionContainer = document.getElementsByClassName("question-container")[0];
     const rollBtn = document.getElementById("rollBtn");
-    const rollResult = document.getElementsByClassName("roll-result")[0];
-    const rollResultContainer = document.getElementsByClassName("roll-result-container")[0];
+    // const rollResultContainer = document.getElementsByClassName("roll-result-container")[0];
     const displayTurn = document.getElementsByClassName("turn-display")[0];
 
     const statusContainer = document.getElementsByClassName("status-container")[0];
@@ -117,23 +115,19 @@
         displayTurn.textContent = `${playerList[Player.currTurn].name}'s turn`;
 
         rollBtn.addEventListener("click", function () {
-            stepNum = Math.floor(Math.random() * 6) + 1;
-            diceImg.src = `../images/${diceList[stepNum-1]}`;
-            rollResult.textContent = stepNum;
-            rollResultContainer.classList.remove("hidden");
-            rollContainer.classList.add("hidden");
-        });
-
-        const nextBtn = document.getElementById("nextQuestion");
-        nextBtn.addEventListener("click", function () {
-            rollContainer.classList.remove("hidden");
-            rollResultContainer.classList.add("hidden");
             diceContainer.classList.add("hidden");
+            rollContainer.classList.remove("hidden");
             questionContainer.classList.remove("hidden");
             const randomNum = Math.floor(Math.random() * questionList.length);
             let problem = questionList[randomNum];
 
-            questionContainer.innerHTML = "";
+            stepNum = Math.floor(Math.random() * 6) + 1;
+
+            questionContainer.innerHTML = "<section class='roll-result-container'>"
+                        + `<section class='dice-img-result'><img class='dice-img-result' src=../images/${diceList[stepNum-1]} alt='dice-img'></section>`
+                        + `<p class='turn-display'>You rolled ...<span class='roll-result'>${stepNum}</span>!</p>`
+                        + "</section>";
+            console.log(questionContainer.innerHTML);
             questionContainer.appendChild(createQuestion(problem));
             questionContainer.appendChild(createImageQuestion(problem));
         });
@@ -170,8 +164,6 @@
             questionDiv.appendChild(sectionAnswer);
         }
 
-        // const newDiv = document.createElement("div");
-        // const wrongMessage = document.createTextNode("Sorry, you got the answer wrong and got a flat tire :(");
         const answerKey = problem.answer;
         const button = document.createElement("button");
         button.textContent = "Submit Answer";
@@ -204,7 +196,7 @@
             statusContainer.style.backgroundColor = "rgb(60, 179, 113)";
             statusHeader.textContent = "Correct";
             statusAlert.textContent = "Woohoo";
-            answerResult.textContent = `The answer is correct! You will now move ${stepNum} step(s) :)`;
+            answerResult.textContent = `You will now move ${stepNum} step(s) :)`;
             if (playerList[Player.currTurn].position + stepNum >= Player.cellList.length) {
                 boardContainer.classList.add("hidden");
                 displayFinalResult(playerList[Player.currTurn]);
@@ -218,10 +210,9 @@
             statusHeader.textContent = "Incorrect";
             statusAlert.textContent = "Flat Tire Alert";
             statusContainer.style.backgroundColor = "#FF6F64";
-            answerResult.textContent = `The answer is incorrect. You have a flat tire for this round :(`;
+            answerResult.textContent = `You have a flat tire for this round :(`;
         }
         Player.nextTurn();
-        diceImg.src = "../images/dice.png";
 
         nextTeamBtn.addEventListener("click", function () {
             diceContainer.classList.remove("hidden");

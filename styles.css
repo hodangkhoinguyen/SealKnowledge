@@ -264,6 +264,11 @@ button.ruleBtn {
 
 #groupBtn > section {
     display: flex;
+    margin: 0.75rem 0;
+}
+
+#groupBtn label {
+    width: 5rem;
 }
 
 #startBtn button:hover {
@@ -279,8 +284,9 @@ button.ruleBtn {
 
 .color-square {
     border-radius: 5px;
-    height: 2rem;
-    width: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 0.25rem;
 }
 
 .square-1 {
