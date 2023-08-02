@@ -8,12 +8,13 @@ html {
 }
 
 h1, h2 {
-    font-family: 'Gluten', cursive;
+    font-family: 'DynaPuff', cursive;
 }
 
 h1 {
     font-weight: 800;
-    font-size: 40px;
+    font-size: 60px;
+    margin: 0.5em;
 }
 
 h2 {
@@ -21,30 +22,213 @@ h2 {
     font-size: 30px;
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 /* home CSS */
 .home {
-    display: flex;
     justify-content: center;
     background-image: url('images/e_background.png');
     background-repeat: no-repeat;
-    background-size: 100%;
-    max-width: 100vw;
-    max-height: 100vh;
+    background-size:cover;
+    height: 100%;
+    width: 100%;
 }
 
-#leftHalf {
+#centerContent {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 3em;
+    margin: auto;
 }
 
-img {
+button#playNow {
     display: flex;
     justify-content: center;
+    margin: 0.5em auto auto auto;
+    padding: 0.3em 0.5em;
+    background-color: rgb(255, 77, 106);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: black 5px 5px;
+    font-size: 30px;
 }
 
-#loginForm {
+.teamSelect h1 {
+    margin: 0;
+}
+
+#fillNames {
+    margin: 0 5em 5em 5em;
+}
+
+/* all sections style */
+section.sectionStyle {
+    margin: 1em;
+}
+
+.fa-arrow-left {
+    font-size: 40px;
+    margin: 1em 1em;
+}
+
+.fa-arrow-left:hover {
+    cursor: pointer;
+}
+/* all section style END */
+
+.hidden {
+    display: none;
+}
+
+#overlay {
+    position: absolute;
+    background-color: white;
+    padding: 2em;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 50vh;
+    transform: translate(40%, 30%);
+    border-radius: 30px;
+    border: rgb(255, 234, 47) 10px solid;
+}
+
+#rules {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 98.5vw;
+    height: 97vh;
+    border: rgb(255, 234, 47) 10px solid;
+    z-index: 5;
+}
+
+#rulesContent {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90vw;
+}
+
+#rulesContent h1 {
+    margin: 0.5em 0 0 0;
+}
+
+#rulesContent h4 {
+    margin: 0;
+    font-size: 20px;
+}
+
+#rulesContent ol li {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+#rulesContent p {
+    margin: 0 0 1em 0;
+    font-size: 15px;
+    color: red;
+}
+
+#rulesContent button {
+    width: 10%;
+}
+
+
+button.ruleBtn {
+    position: absolute;
+    right: 5%;
+    top: 7%;
+    padding: 0.3em 0.5em;
+    background-color: rgb(255, 77, 106);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: black 5px 5px;
+    font-size: 20px;
+}
+
+.ruleBtn:hover, .closeRule:hover, button#playNow:hover {
+    cursor: pointer;
+    background-color: rgb(212, 31, 61);
+}
+
+.closeRule {
+    padding: 0.3em 0.5em;
+    background-color: rgb(255, 77, 106);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: black 5px 5px;
+    font-size: 20px;
+}
+
+#groupBtn > section {
+    display: flex;
+    margin: 0.75rem 0;
+}
+
+#groupBtn label {
+    width: 5rem;
+}
+
+#startBtn button {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    max-width: 30%;
+    background-color: rgb(212, 31, 61);
+    border: none;
+    border-radius: 15px;
+    box-shadow: black 5px 5px;
+    font-size: 40px;
+}
+
+.color-square {
+    border-radius: 5px;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 0.25rem;
+}
+
+.square-1 {
+    background-color: black;
+}
+
+.square-2 {
+    background-color: red;
+}
+
+.square-3 {
+    background-color: blue;
+}
+
+.square-4 {
+    background-color: green;
+}
+
+/* #centerContent img {
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+#centerContent img:hover {
+    cursor: pointer;
+    background-image: url(seal_2.png);
+} */
+
+/* #loginForm {
     display: flex;
     flex-direction: column;
     margin: 1em 1em 1em 4em;
@@ -107,52 +291,26 @@ img {
     background-color: #438EFF;
     color: white;
     border: #438EFF 1px solid;
-}
-
-button:hover {
-    cursor: pointer;
-}
+} */
 
 /* question set selection - guest flow */
-.beginGame {
+/* .beginGame {
     display:flex;
     background-image: url('images/q_background.png');
     background-image: 100%;
-}
-
-section#selectTopic {
-    width: 60vw;
-    height: 80vh;
-
-}
-
-/* all sections style */
-/* section.sectionStyle {
-    margin: 5em;
 } */
 
-.q-set-select h2 {
+/* section#selectTopic {
+    width: 60vw;
+    height: 80vh;
+} */
+
+/* .q-set-select h2 {
     padding-top: 2em;
-}
-
-.fa-arrow-left {
-    font-size: 40px;
-    margin: 1em 1em;
-}
-
-.fa-arrow-left:hover {
-    cursor: pointer;
-}
-/* all section style END */
-
-
-.hidden {
-    display: none;
-}
+} */
 
 /* user test & overlay styling */
-#userTestBtn button {
-    /* display: flex; */
+/* #userTestBtn button {
     justify-content: space-around;
     margin-top: 1em;
     padding: 0.5em 1em;
@@ -167,140 +325,4 @@ section#selectTopic {
 
 #userTestBtn button:hover {
     background-color: rgb(212, 31, 61);
-}
-
-#overlay {
-    position: absolute;
-    background-color: white;
-    padding: 2em;
-    top: 0;
-    left: 0;
-    width: 50vw;
-    height: 50vh;
-    transform: translate(40%, 30%);
-    border-radius: 30px;
-    border: rgb(255, 234, 47) 10px solid;
-}
-
-#ruleSection {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-}
-
-#rules {
-    position: absolute;
-    background-color: white;
-    padding: 2em;
-    top: 0;
-    left: 0;
-    width: 75vw;
-    height: fit-content;
-    transform: translate(15%, 10%);
-    border-radius: 30px;
-    border: rgb(255, 234, 47) 10px solid;
-}
-
-#rulesContent {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 50vw;
-}
-
-#rulesContent h1 {
-    margin: 0.5em 0 0 0;
-}
-
-#rulesContent h4 {
-    margin: 0;
-    font-size: 20px;
-}
-
-#rulesContent ol li {
-    font-size: 18px;
-    line-height: 1.5em;
-}
-
-#rulesContent p {
-    margin: 0 0 1em 0;
-    font-size: 15px;
-    color: red;
-}
-
-#rulesContent button {
-    width: 10%;
-}
-
-
-button.ruleBtn {
-    display: flex;
-    justify-content: space-around;
-    padding: 0.3em 0.8em;
-    max-width: 100%;
-    background-color: rgb(255, 77, 106);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    box-shadow: black 5px 5px;
-    font-size: 20px;
-}
-
-.ruleBtn:hover {
-    cursor: pointer;
-    background-color: rgb(212, 31, 61);
-}
-
-.closeRule {
-    padding: 0.3em 0.8em;
-    max-width: 100%;
-    background-color: rgb(255, 77, 106);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    box-shadow: black 5px 5px;
-    font-size: 15px;
-}
-
-#groupBtn > section {
-    display: flex;
-    margin: 0.75rem 0;
-}
-
-#groupBtn label {
-    width: 5rem;
-}
-
-#startBtn button:hover {
-    margin: 0.5em;
-    padding: 0.5em 1em;
-    max-width: 30%;
-    background-color: rgb(212, 31, 61);
-    border: none;
-    border-radius: 15px;
-    box-shadow: black 5px 5px;
-    font-size: 20px;
-}
-
-.color-square {
-    border-radius: 5px;
-    height: 1.5rem;
-    width: 1.5rem;
-    margin-left: 0.25rem;
-}
-
-.square-1 {
-    background-color: black;
-}
-
-.square-2 {
-    background-color: red;
-}
-
-.square-3 {
-    background-color: blue;
-}
-
-.square-4 {
-    background-color: green;
-}
+} */

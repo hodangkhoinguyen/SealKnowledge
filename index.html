@@ -8,7 +8,7 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@300;400;700&family=Mali:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600&family=Mali:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- icons from font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -28,7 +28,7 @@
 <!-- change OVERLAY to FULL PAGE -->
     <section id="rules" class="hidden">
         <section id="rulesContent">
-            <h1>Here are the rules for Seal Your Knowledge!</h1>
+            <h2>Here are the rules for Seal Your Knowledge!</h2>
             <p>The first team to return to the base wins the game!</p>
             <h4>Basic Rules of the Game</h4>
             <ol>
@@ -54,68 +54,32 @@
 <!-- — — — — — — — — — — — — — landing page html BEGIN — — — — — — — — — — — — — -->
     <section class="home">
 
-        <section id="leftHalf">
+        <section id="ruleSection">
+            <button class="ruleBtn">Rules</button>
+        </section>
+        <section id="centerContent">
             <h1>Seal Your Knowledge</h1>
-            <img src="images/seal.png" alt="centennial seal image" width="500" height="500">
+            <img src="images/seal.png" alt="centennial seal image">
         </section>
-
-        <section id="loginForm">
-            <section id="ruleSection">
-                <button class="ruleBtn">Rules</button>
-            </section>
-
-            <h2>Log In</h2>
-            <section id="loginInput">
-                <input placeholder="Username">
-                <input placeholder="Password">
-                <button id="login">Log In</button>
-            </section>
-
-            <section id="loginOverlay" class="hidden">
-                <p>Sorry, we are still working on developing login feature :(</p>
-                <button id="closeOverlay">close</button>
-            </section>
-
-            <br>
-            <br>
-            <br>
-
-            <section id="guest">
-                <p>Don't have an account yet?</p>
-                <button id="createAccount">Create Account</button>
-                <button id="continueGuest">Continue As Guest</button>
-            </section>
-
-            <!-- Planning to make a big button that says PLAY NOW -->
-        </section>
+        <button id="playNow">Play Now</button>
+        
     </section>
 <!-- — — — — — — — — — — — — — landing page html END — — — — — — — — — — — — — -->
-
-<!-- — — — — — — — — — — — — — select question set BEGIN — — — — — — — — — — — — — -->
-    <section class="beginGame sectionStyle hidden">
-        <i id="backHome" class="fa-solid fa-arrow-left"></i>
-        <section id="q-set-select">
-            <h2>Click on the topic to se</h2>
-
-            <section id="selectTopic">
-                <button id="questionSelect" class="whiteBtn">Putah Creek Wildlife</button>
-            </section>
-        </section>
-    </section>
-<!-- — — — — — — — — — — — — — select question set END — — — — — — — — — — — — — -->
 
 <!-- — — — — — — — — — — — — — select team names BEGIN — — — — — — — — — — — — — — -->
     <section class="teamSelect sectionStyle hidden">
         <i id="backBegin" class="fa-solid fa-arrow-left"></i>
-        <h1>Almost there...!</h1>
-        <h3>Enter Your Team Names</h3>
+        <section id="fillNames">
+            <h1>Let's see who's playing!</h1>
+            <h3>Enter Your Team Names</h3>
 
-        <!-- I'M HAVING TROUBLE MAKING ALL PARTS REQUIRED FOR THIS FORM -->
-        <section id="groupBtn">
-            <section><label>Team 1:</label> <input class="teamname" placeholder="   team 1" required><section class="color-square square-1"></section></section>
-            <section><label>Team 2:</label> <input class="teamname" placeholder="   team 2" required><section class="color-square square-2"></section></section>
-            <section><label>Team 3:</label> <input class="teamname" placeholder="   team 3" required><section class="color-square square-3"></section></section>
-            <section><label>Team 4:</label> <input class="teamname" placeholder="   team 4" required><section class="color-square square-4"></section></section>
+            <!-- I'M HAVING TROUBLE MAKING ALL PARTS REQUIRED FOR THIS FORM -->
+            <section id="groupBtn">
+                <section><label>Team 1:</label> <input class="teamname" placeholder="   team 1" required><section class="color-square square-1"></section></section>
+                <section><label>Team 2:</label> <input class="teamname" placeholder="   team 2" required><section class="color-square square-2"></section></section>
+                <section><label>Team 3:</label> <input class="teamname" placeholder="   team 3" required><section class="color-square square-3"></section></section>
+                <section><label>Team 4:</label> <input class="teamname" placeholder="   team 4" required><section class="color-square square-4"></section></section>
+            </section>
         </section>
         <section id="startBtn">
             <button type="submit" id="start-game">Start Game</button>
