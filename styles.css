@@ -157,7 +157,7 @@ button.ruleBtn {
     font-size: 20px;
 }
 
-.ruleBtn:hover, .closeRule:hover, button#playNow:hover {
+.ruleBtn:hover, .closeRule:hover, #playNow:hover {
     cursor: pointer;
     background-color: rgb(212, 31, 61);
 }

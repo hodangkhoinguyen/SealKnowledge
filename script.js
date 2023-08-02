@@ -62,8 +62,9 @@
 //         document.querySelector('#loginOverlay').classList.add('hidden');
 //     });
 
-    const startBtn = document.getElementById("start-game");
-    startBtn.addEventListener("click", function() {
+    const startButton = document.getElementById("startBtn");
+    startButton.addEventListener('click', function (event) {
+        event.preventDefault();
         const inputTeamName = document.getElementsByClassName("teamname");
         let teamname = [];
         for (let i of inputTeamName) {

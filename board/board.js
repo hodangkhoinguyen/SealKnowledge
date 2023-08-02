@@ -187,16 +187,14 @@
         return questionDiv;
     }
 
-    /**************************** CHANGE THE HEADER AND ALERT OF STATUS PLEASEEEEE */
     function displayStatus(isCorrect) {
         statusContainer.classList.remove("hidden");
         const statusHeader = document.getElementsByClassName("status-header-text")[0];
         const statusAlert = document.getElementsByClassName("answer-alert")[0];
         if (isCorrect) {
             statusContainer.style.backgroundColor = "rgb(60, 179, 113)";
-            statusHeader.textContent = "Correct";
-            statusAlert.textContent = "Woohoo";
-            answerResult.textContent = `You will now move ${stepNum} step(s) :)`;
+            statusHeader.textContent = "Correct :)";
+            answerResult.textContent = `You will now move ${stepNum} step(s)`;
             if (playerList[Player.currTurn].position + stepNum >= Player.cellList.length) {
                 boardContainer.classList.add("hidden");
                 displayFinalResult(playerList[Player.currTurn]);
@@ -207,10 +205,9 @@
             }
         }
         else {
-            statusHeader.textContent = "Incorrect";
-            statusAlert.textContent = "Flat Tire Alert";
+            statusHeader.textContent = "Incorrect :(";
             statusContainer.style.backgroundColor = "#FF6F64";
-            answerResult.textContent = `You have a flat tire for this round :(`;
+            answerResult.textContent = `You cannot move due to a flat tire`;
         }
         Player.nextTurn();
 

@@ -152,7 +152,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -162,20 +162,25 @@ body {
     align-items: center;
 }
 
-.status-header h2 {
+h2.status-header-text {
     font-weight: bold;
+    font-size: 30px;
 }
 
 .answer-container {
     border-radius: 10px;
     background-color: #494949;
-    height: 70%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
+}
+
+button#nextTeamBtn {
+    margin-bottom: 3em;
 }
 
 .status-container > section {
