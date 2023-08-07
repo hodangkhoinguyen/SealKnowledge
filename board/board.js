@@ -221,7 +221,7 @@
     function createImageQuestion(problem) {
         const questionDiv = document.createElement("section");
         questionDiv.className = "question-image";
-        questionDiv.innerHTML = `<img src="${problem.photo}"/>`;
+        // questionDiv.innerHTML = `<img src="${problem.photo}"/>`;
         return questionDiv;
     }
 
@@ -241,5 +241,6 @@
         .then(() => {
             setUp();
         })
+
 })();
 

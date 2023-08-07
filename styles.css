@@ -27,14 +27,15 @@ body {
     width: 100vw;
 }
 
-button:hover {
+/* cursor pointer */
+button:hover,  #startBtn:hover {
     cursor: pointer;
 }
 
 /* home CSS */
 .home {
     justify-content: center;
-    background-image: url('images/e_background.png');
+    background-image: url('images/q_background.png');
     background-repeat: no-repeat;
     background-size:cover;
     height: 100%;
@@ -63,6 +64,15 @@ button#playNow {
 
 .teamSelect h1 {
     margin: 0;
+}
+
+.teamSelect {
+    justify-content: center;
+    background-image: url('images/e_background.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100%;
+    width: 100%;
 }
 
 #fillNames {
@@ -103,7 +113,7 @@ section.sectionStyle {
 
 #rules {
     position: absolute;
-    background-color: white;
+    background-color: rgb(255, 237, 207);
     top: 0;
     left: 0;
     width: 98.5vw;
@@ -159,10 +169,12 @@ button.ruleBtn {
 
 .ruleBtn:hover, .closeRule:hover, #playNow:hover {
     cursor: pointer;
-    background-color: rgb(212, 31, 61);
+    background-color: white;
+    color:  rgb(255, 77, 106);
 }
 
 .closeRule {
+    margin: 3em auto;
     padding: 0.3em 0.5em;
     background-color: rgb(255, 77, 106);
     color: white;
@@ -172,24 +184,62 @@ button.ruleBtn {
     font-size: 20px;
 }
 
+#fillNames {
+    text-align: center;
+}
+
 #groupBtn > section {
     display: flex;
     margin: 0.75rem 0;
+}
+
+#groupBtn {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 2em auto auto auto;
+    padding: 0 0 1em 0;
+    width: 35%;
+    border-radius: 15px;
 }
 
 #groupBtn label {
     width: 5rem;
 }
 
-#startBtn button {
-    margin: 0.5em;
+form#groupBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+input#startBtn {
+    margin: 2em auto auto auto;
     padding: 0.5em 1em;
     max-width: 30%;
-    background-color: rgb(212, 31, 61);
+    background-color: rgb(255, 77, 106);
     border: none;
     border-radius: 15px;
     box-shadow: black 5px 5px;
-    font-size: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+input#startBtn:hover {
+    margin: 2em auto auto auto;
+    padding: 0.5em 1em;
+    max-width: 30%;
+    background-color:  white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: black 5px 5px;
+    font-size: 20px;
+    color:  rgb(255, 77, 106);
+}
+
+input.teamname {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.157);
 }
 
 .color-square {
