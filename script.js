@@ -67,6 +67,14 @@
         event.preventDefault();
         const inputTeamName = document.getElementsByClassName("teamname");
         let teamname = [];
+        // If the teamnames are not filled out
+        for (let i of inputTeamName) {
+            if (i.value === "") {
+                alert("You need to enter all team names");
+                return;
+            }
+        }
+
         for (let i of inputTeamName) {
             teamname.push(i.value);
         }
