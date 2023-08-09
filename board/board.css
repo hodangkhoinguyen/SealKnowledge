@@ -215,25 +215,88 @@ button {
 }
 
 /* CSS for first cell */
-.cell-8 {
-    background-image: url("../images/egghead.png");
+.cell-1 {
+    background-image: url("../images/start.png");
     background-position: center;
 	background-repeat: no-repeat;
-	background-size: 5rem;
+	background-size: 7rem;
+}
+
+.cell-2 {
+    background-image: url("../images/arrow_ln.png");
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 8rem;
+}
+
+.cell-3 {
+    background-image: url("../images/bike_ln.png");
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 8rem;
+}
+
+.cell-4, .cell-5, .cell-6, .cell-7 {
+    background-image: url("../images/plain_ln.png");
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 8rem;
+}
+
+.cell-8 {
+    background-image: url("../images/egg1.png") ;
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 8rem;
+}
+
+.cell-9, .cell-10, .cell-11 {
+    background-image: url("../images/vertical_ln.png");
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 8rem;
 }
 
 .cell-12 {
-    background-image: url("../images/international.png");
+    background-image: url("../images/egg2.png");
     background-position: center;
 	background-repeat: no-repeat;
-	background-size: 10rem;
+	background-size: 12rem;
+}
+
+.cell-13 {
+    background-image: url("../images/arrow_left.png");
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 8rem;
+}
+
+.cell-14 {
+    background-image: url("../images/bike_left.png") ;
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 8rem;
+}
+
+.cell-15, .cell-16, .cell-17, .cell-18 {
+    background-image: url("../images/plain_ln.png");
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 8rem;
 }
 
 .cell-19 {
-    background-image: url("../images/water-tank.png");
+    background-image: url("../images/egg4.png") ;
     background-position: center;
 	background-repeat: no-repeat;
-	background-size: 3rem;
+	background-size: 12rem;
+}
+
+.cell-20, .cell-21, .cell-22 {
+    background-image: url("../images/vertical_ln.png");
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: 8rem;
 }
 
 .final-result {
@@ -241,6 +304,8 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 30px;
+    margin: 3em 0 0 0;
 }
 
 .hidden {

@@ -6,28 +6,23 @@
             "2-4 months",
             "2-4 years"
         ],
-        "answer": "2-4 years",
-        "photo": "../images/a_salmon.png"
-    },
-    {
+        "answer": "2-4 years"
+    }, {
         "question": "What is true about the muskrat in Putah Creek?",
         "options": [
             "They are frequently seen",
             "Their tails are like paddles",
-            "They are a type of a duck"
+            "They are a type of duck"
         ],
-        "answer": "Their tails are like paddles",
-        "photo": "../images/a_muskrat.png"
-    },
-    {
-        "question": "What do bats in Davis eat for living?",
+        "answer": "Their tails are like paddles"
+    }, {
+        "question": "What do bats in Davis eat for a living?",
         "options": [
             "fruits",
             "small worms",
             "large nocturnal insects"
         ],
-        "answer": "large nocturnal insects",
-        "photo": "../images/a_bats.png"
+        "answer": "large nocturnal insects"
     }, {
         "question": "When can you begin to spot Short-eared Owls?",
         "options": [
@@ -35,8 +30,16 @@
             "late afternoon",
             "late night"
         ],
-        "answer": "late afternoon",
-        "photo": "../images/a_shortearOwl.png"
+        "answer": "late afternoon"
+    }, {
+        "question": "How can you tell the difference between male ducks and female ducks?",
+        "options": [
+            "Males have curly tail feathers during the winter and spring",
+            "Females have bigger beaks and wings",
+            "Males have a more vibrant colored feathres than females"
+        ],
+        "answer": "Males have curly tail feathers during the winter and spring"
     }
+    
 
 ]

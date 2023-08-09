@@ -70,7 +70,7 @@
         // If the teamnames are not filled out
         for (let i of inputTeamName) {
             if (i.value === "") {
-                alert("You need to enter all team names");
+                alert("Please enter all of the team names");
                 return;
             }
         }
