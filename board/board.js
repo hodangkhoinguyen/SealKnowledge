@@ -137,7 +137,7 @@
 
             questionContainer.innerHTML = "<section class='roll-result-container'>"
                         + `<section class='dice-img-result'><img class='dice-img-result' src=../images/${diceList[stepNum-1]} alt='dice-img'></section>`
-                        + `<p class='turn-display'>You rolled ...<span class='roll-result'>${stepNum}</span>!</p>`
+                        + `<p class='turn-display'>${playerList[Player.currTurn].name} rolled ...<span class='roll-result'>${stepNum}</span>!</p>`
                         + "</section>";
             console.log(questionContainer.innerHTML);
             questionContainer.appendChild(createQuestion(problem));
