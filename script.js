@@ -18,13 +18,13 @@
     // open overlay
     document.querySelector('.ruleBtn').addEventListener('click', function(event) {
         event.preventDefault();
-        document.getElementById('rules').classList.remove('hidden');
+        document.getElementById('rules').style.display = 'flex';
     });
 
     // closing overlay
     document.querySelector('.closeRule').addEventListener('click', function(event) {
         event.preventDefault();
-        document.getElementById('rules').classList.add('hidden');
+        document.getElementById('rules').style.display = 'none';
     });
 
     // // changing screens from onboarding to begin game page
@@ -70,7 +70,8 @@
         // If the teamnames are not filled out
         for (let i of inputTeamName) {
             if (i.value === "") {
-                alert("You need to enter all team names");
+                // alert("You need to enter all team names");
+                document.getElementById("teamname-warning-container").style.display = 'block';
                 return;
             }
         }
@@ -81,5 +82,10 @@
 
         localStorage.setItem("teamname", JSON.stringify(teamname));
         window.location.href = 'board/board.html';
-    });    
+    });
+
+    document.getElementById('closeWarning').addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById("teamname-warning-container").style.display = 'none';
+    })
 })();
