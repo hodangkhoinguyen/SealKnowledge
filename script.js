@@ -27,41 +27,6 @@
         document.getElementById('rules').style.display = 'none';
     });
 
-    // // changing screens from onboarding to begin game page
-    // document.querySelector('#continueGuest').addEventListener('click', function(event) {
-    //     document.querySelector('.home').classList.add('hidden');
-    //     document.querySelector('.beginGame').classList.remove('hidden');
-	// });
-
-    // // going BACK to onboarding from begin game page
-    // document.querySelector('#questionSelect').addEventListener('click', function(event) {
-    //     document.querySelector('.teamSelect').classList.remove('hidden');
-    //     document.querySelector('.beginGame').classList.add('hidden');
-    // });
-
-    // // going BACK to onboarding from begin game page
-    // document.querySelector('#backHome').addEventListener('click', function(event) {
-    //     document.querySelector('.home').classList.remove('hidden');
-    //     document.querySelector('.beginGame').classList.add('hidden');
-    // });
-    
-    // // going BACK to begin game page from team select page 
-    // document.querySelector('#backBegin').addEventListener('click', function(event) {
-    //     document.querySelector('.beginGame').classList.remove('hidden');
-    //     document.querySelector('.teamSelect').classList.add('hidden');
-    // });
-
-// /* login button overlay */
-//     document.querySelector('#login').addEventListener('click', function(event) {
-//         event.preventDefault();
-//         document.querySelector('#loginOverlay').classList.remove('hidden');
-//     });
-//     // closing overlay
-//     document.querySelector('#closeOverlay').addEventListener('click', function(event) {
-//         event.preventDefault();
-//         document.querySelector('#loginOverlay').classList.add('hidden');
-//     });
-
     const startButton = document.getElementById("startBtn");
     startButton.addEventListener('click', function (event) {
         event.preventDefault();

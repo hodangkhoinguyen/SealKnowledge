@@ -46,10 +46,10 @@
     const lowerRow = document.getElementById("lower-row");
     const leftColumn = document.getElementById("left-column");
     const rightColumn = document.getElementById("right-column");
-    const mover1 = document.getElementsByClassName("bike-img")[0];
-    const mover2 = document.getElementsByClassName("bike-img")[1];
-    const mover3 = document.getElementsByClassName("bike-img")[2];
-    const mover4 = document.getElementsByClassName("bike-img")[3];
+    const mover1 = document.getElementsByClassName("mover-img")[0];
+    const mover2 = document.getElementsByClassName("mover-img")[1];
+    const mover3 = document.getElementsByClassName("mover-img")[2];
+    const mover4 = document.getElementsByClassName("mover-img")[3];
 
     const diceList = ["one.png", "two.png", "three.png", "four.png", "five.png", "six.png"];
 
@@ -204,7 +204,7 @@
         const statusHeader = document.getElementsByClassName("status-header-text")[0];
         const statusAlert = document.getElementsByClassName("answer-alert")[0];
         if (isCorrect) {
-            statusContainer.style.backgroundColor = "rgb(60, 179, 113)";
+            statusContainer.style.backgroundColor = "rgb(95, 221, 95)";
             statusHeader.textContent = "Correct :)";
             answerResult.textContent = `You will now move ${stepNum} step(s)`;
             if (playerList[Player.currTurn].position + stepNum >= Player.cellList.length) {

@@ -113,10 +113,14 @@ body {
 }
 
 .question-display {
-    margin: 0 2rem;
+    /* margin: 0 2rem; */
     display: flex;
     flex-direction: column;
     width: 55%;
+}
+
+.question-display button {
+    margin: auto auto auto 0;
 }
 
 .question-image {
@@ -201,10 +205,10 @@ button {
     cursor: pointer;
 }
 
-.bike-img {
+.mover-img {
     position: absolute;
-    width: 3rem;
-    transition: all .5s ease-in-out;
+    width: 2rem;
+    transition: all .2s ease-in-out;
 }
 
 /* CSS for first cell */
@@ -212,7 +216,7 @@ button {
     background-image: url("../images/start.png");
     background-position: center;
 	background-repeat: no-repeat;
-	background-size: 7rem;
+	background-size: 8rem;
 }
 
 .cell-2 {
