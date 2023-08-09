@@ -14,11 +14,24 @@
         }
 
         move(num = 0) {
-            this.position += num;
-            this.position %= cellList.length;
-            let currCell = cellList[this.position];
-            this.moverSymbol.style.left = currCell.getBoundingClientRect().left + this.variableX + "px";
-            this.moverSymbol.style.top = currCell.getBoundingClientRect().top + this.variableY + "px";
+            if (num == 0) {
+                let currCell = cellList[this.position];
+                this.moverSymbol.style.left = currCell.getBoundingClientRect().left + this.variableX + "px";
+                this.moverSymbol.style.top = currCell.getBoundingClientRect().top + this.variableY + "px";
+            }
+            else {
+                for (let i = 0; i < num; i++) {
+                    console.log(this.moverSymbol);
+                    const that = this;
+                    setTimeout(function() {
+                        that.position += 1;
+                        that.position %= cellList.length;
+                        let currCell = cellList[that.position];
+                        that.moverSymbol.style.left = currCell.getBoundingClientRect().left + that.variableX + "px";
+                        that.moverSymbol.style.top = currCell.getBoundingClientRect().top + that.variableY + "px";
+                    }, 750*i);
+                }
+            }
         }
 
         static nextTurn() {
@@ -51,7 +64,6 @@
     const diceContainer = document.getElementsByClassName("dice-container")[0];
     const questionContainer = document.getElementsByClassName("question-container")[0];
     const rollBtn = document.getElementById("rollBtn");
-    // const rollResultContainer = document.getElementsByClassName("roll-result-container")[0];
     const displayTurn = document.getElementsByClassName("turn-display")[0];
 
     const statusContainer = document.getElementsByClassName("status-container")[0];
