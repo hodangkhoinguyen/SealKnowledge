@@ -107,7 +107,6 @@
         function createCell(num) {
             const cell = document.createElement("section");
             cell.className = `cell cell-${num}`;
-            cell.textContent = num;
             return cell;
         }
 
@@ -141,7 +140,6 @@
                         + "</section>";
             console.log(questionContainer.innerHTML);
             questionContainer.appendChild(createQuestion(problem));
-            questionContainer.appendChild(createImageQuestion(problem));
         });
     }
 
@@ -207,6 +205,8 @@
             statusContainer.style.backgroundColor = "rgb(95, 221, 95)";
             statusHeader.textContent = "Correct :)";
             answerResult.textContent = `You will now move ${stepNum} step(s)`;
+
+            // Check if the team wins as they reach the start cell again
             if (playerList[Player.currTurn].position + stepNum >= Player.cellList.length) {
                 boardContainer.classList.add("hidden");
                 displayFinalResult(playerList[Player.currTurn]);
@@ -230,16 +230,9 @@
         });
     }
 
-    function createImageQuestion(problem) {
-        const questionDiv = document.createElement("section");
-        questionDiv.className = "question-image";
-        // questionDiv.innerHTML = `<img src="${problem.photo}"/>`;
-        return questionDiv;
-    }
-
     const finalResultContainer = document.getElementsByClassName("final-result")[0];
     function displayFinalResult(player) {
-        window.location.href = 'result.html';
+        finalResultContainer.classList.remove("hidden");
         const teamWinner = document.getElementsByClassName("team-winner")[0];
         teamWinner.textContent = player.name;
 

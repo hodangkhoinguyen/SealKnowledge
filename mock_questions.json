@@ -32,13 +32,37 @@
         ],
         "answer": "late afternoon"
     }, {
-        "question": "How can you tell the difference between male ducks and female ducks?",
+        "question": "What is the difference between male ducks and female ducks?",
         "options": [
             "Males have curly tail feathers during the winter and spring",
             "Females have bigger beaks and wings",
             "Males have a more vibrant colored feathres than females"
         ],
         "answer": "Males have curly tail feathers during the winter and spring"
+    }, {
+        "question": "What year was the Davis Centennial Seal installed?",
+        "options": [
+            "2021",
+            "2022",
+            "2023"
+        ],
+        "answer": "2021"
+    }, {
+        "question": "What flower is the official Davis City flower>",
+        "options": [
+            "Golden Lupine",
+            "Sunflower",
+            "Marigolds"
+        ],
+        "answer": "Golden Lupine"
+    }, {
+        "question": "What does 'Patwin' mean in Wintun language?",
+        "options": [
+            "Power",
+            "Land",
+            "People"
+        ],
+        "answer": "People"
     }
     
 
