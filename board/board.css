@@ -201,7 +201,8 @@ button {
 .mover-img {
     position: absolute;
     width: 2rem;
-    transition: all .2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    animation-duration: 2s;
 }
 
 /* CSS for first cell */

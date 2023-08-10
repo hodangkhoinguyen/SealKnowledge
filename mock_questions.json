@@ -48,13 +48,13 @@
         ],
         "answer": "2021"
     }, {
-        "question": "What flower is the official Davis City flower>",
+        "question": "What map does the Davis Centennial Seal represent in the middle?",
         "options": [
-            "Golden Lupine",
-            "Sunflower",
-            "Marigolds"
+            "Highway 10 and Highway 101",
+            "Highway 57 and Highway 210",
+            "Highway 80 and Highway 113"
         ],
-        "answer": "Golden Lupine"
+        "answer": "Highway 80 and Highway 113"
     }, {
         "question": "What does 'Patwin' mean in Wintun language?",
         "options": [
@@ -63,7 +63,40 @@
             "People"
         ],
         "answer": "People"
+    }, {
+        "question": "What does the Davis Centennial Seal NOT symbolize?",
+        "options": [
+            "Stewardship",
+            "Friendship",
+            "Community"
+        ],
+        "answer": "Friendship"
+    }, {
+        "question": "What did the Patwin people do on purpose to stimulate growth in nature?",
+        "options": [
+            "cause intentional fire",
+            "shower while singing",
+            "created artifical wind"
+        ],
+        "answer": "cause intentional fire"
+    }, {
+        "question": "What place is preserved for birds to provide their habitat?",
+        "options": [
+            "Arctic Flyway",
+            "Pacific Flyway",
+            "Pacific Wetland"
+        ],
+        "answer": "Pacific Flyway"
+    }, {
+        "question": "What is causing harm to the birds at the Pacific Flyway?",
+        "options": [
+            "climate change",
+            "habitat loss",
+            "both climate change and habitat loss"
+        ],
+        "answer": "both climate change and habitat loss"
     }
+    
     
 
 ]
