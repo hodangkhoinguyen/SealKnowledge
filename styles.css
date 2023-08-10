@@ -172,7 +172,7 @@ button.ruleBtn {
 }
 
 .closeRule {
-    margin: 3em auto;
+    margin: 0 auto;
     padding: 0.3em 0.5em;
     background-color: rgb(255, 77, 106);
     color: white;

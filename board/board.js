@@ -239,7 +239,7 @@
 
     const finalResultContainer = document.getElementsByClassName("final-result")[0];
     function displayFinalResult(player) {
-        finalResultContainer.classList.remove("hidden");
+        window.location.href = 'result.html';
         const teamWinner = document.getElementsByClassName("team-winner")[0];
         teamWinner.textContent = player.name;
 
