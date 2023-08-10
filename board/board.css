@@ -297,12 +297,19 @@ button {
 }
 
 .final-result {
+    background-image: url("../images/congrats.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    margin: 3em 0 0 0;
+    padding: 11rem 15rem;
+}
+
+.final-result h3 {
+    text-align: center;
 }
 
 .hidden {
